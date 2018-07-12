@@ -1,0 +1,10 @@
+C:\Users\filip\source\repos\Budget\Budget\bin\Debug\Budget.exe.config
+C:\Users\filip\source\repos\Budget\Budget\bin\Debug\Budget.exe
+C:\Users\filip\source\repos\Budget\Budget\bin\Debug\Budget.pdb
+C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.csprojAssemblyReference.cache
+C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.Form1.resources
+C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.Properties.Resources.resources
+C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.csproj.GenerateResource.cache
+C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.csproj.CoreCompileInputs.cache
+C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.exe
+C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.pdb
