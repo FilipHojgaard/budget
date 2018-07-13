@@ -49,10 +49,25 @@ namespace Budget
 
         private void Syncronize() {
             // MIE
+            // Skat numerics
             mie.aSkat = (float)mieASkat.Value;
             mie.am = (float)MieAMBidrag.Value;
             mie.fradrag = (float)MieFradrag.Value;
+
+            // Økonomi numerics
+            mie.pay = (float)miePay.Value;
+            mie.su = (float)mieSU.Value;
+            mie.phone = (float)mieTelefonOp.Value;
+            mie.transportDaily = (float)mieDagligTransportOp.Value;
+            mie.lenses = (float)mieLinserOp.Value;
+            mie.transportOther = (float)mieAndenTransportOp.Value;
+            mie.dentist = (float)mieTandlageOp.Value;
+            mie.clothes = (float)mieTojOp.Value;
+            mie.fun = (float)mieHyggeOp.Value;
+            mie.girlStuff = (float)miePigeOp.Value;
+
             mie.Calculate();
+            // skat labels
             mieBeforeTax.Text = mie.income.ToString();
             mieAfterTax.Text = mie.postTax.ToString();
             mieSkat1.Text = mie.income.ToString();
@@ -62,14 +77,29 @@ namespace Budget
             mieSkat5.Text = mie.taxToPay.ToString();
             mieSkat6.Text = mie.payAfterTax.ToString();
             mieSkat7.Text = mie.totalTax.ToString();
+            // Økonomi labels
             mieUdgifterLabel.Text = mie.outcome.ToString();
             mieTotalLabel.Text = mie.total.ToString();
 
             // FILIP
+            // Skat numerics
             filip.aSkat = (float)filipASkatOp.Value;
             filip.am = (float)filipAMOp.Value;
             filip.fradrag = (float)filipFradragOp.Value;
+            filip.pay = (float)numericUpDown11.Value;
+            filip.su = (float)numericUpDown10.Value;
+            filip.phone = (float)numericUpDown9.Value;
+            filip.transportDaily = (float)numericUpDown8.Value;
+            filip.transportOther = (float)numericUpDown5.Value;
+            filip.dentist = (float)numericUpDown6.Value;
+            filip.hair = (float)numericUpDown4.Value;
+            filip.clothes = (float)numericUpDown3.Value;
+            filip.fun = (float)numericUpDown2.Value;
+
+            // Økonomi numerics
+
             filip.Calculate();
+            // skat labels
             filipBeforeTax.Text = filip.income.ToString();
             filipAfterTax.Text = filip.postTax.ToString();
             filipSkat1.Text = filip.income.ToString();
@@ -79,10 +109,26 @@ namespace Budget
             filipSkat5.Text = filip.taxToPay.ToString();
             filipSkat6.Text = filip.payAfterTax.ToString();
             filipSkat7.Text = filip.totalTax.ToString();
+            // Økonomi labels
             filipUdgifterLabel.Text = filip.outcome.ToString();
             filipTotalLabel.Text = filip.total.ToString();
 
             // FÆLLES
+            // numerics
+            mutual.boligTilskud = (float)boligTilskudOp.Value;
+            mutual.rent = (float)huslejeOp.Value;
+            mutual.heat = (float)varmeOp.Value;
+            mutual.water = (float)vandOp.Value;
+            mutual.electricity = (float)elektricitetOp.Value;
+            mutual.homeInsurance = (float)boligForsikringOp.Value;
+            mutual.food = (float)madOp.Value;
+            mutual.households = (float)husholdningOp.Value;
+            mutual.television = (float)fjernsynOp.Value;
+            mutual.internet = (float)internetOp.Value;
+            mutual.netflix = (float)netflixOp.Value;
+            mutual.spotify = (float)spotifyOp.Value;
+
+            // labels
             mieIndkomstLabel.Text = mie.total.ToString();
             filipIndkomstLabel.Text = filip.total.ToString();
             mutual.mieIndkomst = mie.total;
