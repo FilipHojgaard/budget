@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Budget
 {
@@ -19,6 +20,109 @@ namespace Budget
         {
             InitializeComponent();
         }
+
+        public void SaveFile() {
+            Console.WriteLine("Attempting to save budget file");
+            StreamWriter writer = new StreamWriter(@"budget_file_01.txt", false);
+            // saves every bit of information on each line
+            // fælles økonomi
+            writer.WriteLine(boligTilskudOp.Value);
+            writer.WriteLine(huslejeOp.Value);
+            writer.WriteLine(varmeOp.Value);
+            writer.WriteLine(vandOp.Value);
+            writer.WriteLine(elektricitetOp.Value);
+            writer.WriteLine(boligForsikringOp.Value);
+            writer.WriteLine(madOp.Value);
+            writer.WriteLine(husholdningOp.Value);
+            writer.WriteLine(fjernsynOp.Value);
+            writer.WriteLine(internetOp.Value);
+            writer.WriteLine(netflixOp.Value);
+            writer.WriteLine(spotifyOp.Value);
+            // mie økonomi
+            writer.WriteLine(miePay.Value);
+            writer.WriteLine(mieSU.Value);
+            writer.WriteLine(mieTelefonOp.Value);
+            writer.WriteLine(mieDagligTransportOp.Value);
+            writer.WriteLine(mieLinserOp.Value);
+            writer.WriteLine(mieAndenTransportOp.Value);
+            writer.WriteLine(mieTandlageOp.Value);
+            writer.WriteLine(mieFrisorOp.Value);
+            writer.WriteLine(mieTojOp.Value);
+            writer.WriteLine(mieHyggeOp.Value);
+            writer.WriteLine(miePigeOp.Value);
+            // mie skat
+            writer.WriteLine(mieASkat.Value);
+            writer.WriteLine(MieAMBidrag.Value);
+            writer.WriteLine(MieFradrag.Value);
+            // filip økonomi
+            writer.WriteLine(numericUpDown11.Value);
+            writer.WriteLine(numericUpDown10.Value);
+            writer.WriteLine(numericUpDown9.Value);
+            writer.WriteLine(numericUpDown8.Value);
+            writer.WriteLine(numericUpDown5.Value);
+            writer.WriteLine(numericUpDown6.Value);
+            writer.WriteLine(numericUpDown4.Value);
+            writer.WriteLine(numericUpDown3.Value);
+            writer.WriteLine(numericUpDown2.Value);
+            // filip skat
+            writer.WriteLine(filipASkatOp.Value);
+            writer.WriteLine(filipAMOp.Value);
+            writer.WriteLine(filipFradragOp.Value);
+            writer.Close();
+            MessageBox.Show("Saved succesfully");
+        }
+
+        public void LoadFile() {
+            Console.WriteLine("attempting to load budget file");
+            string[] allLines = File.ReadAllLines(@"budget_file_01.txt");
+            // fælles økonomi
+            boligTilskudOp.Value = Int32.Parse(allLines[0]);
+            huslejeOp.Value = Int32.Parse(allLines[1]);
+            varmeOp.Value = Int32.Parse(allLines[2]);
+            vandOp.Value = Int32.Parse(allLines[3]);
+            elektricitetOp.Value = Int32.Parse(allLines[4]);
+            boligForsikringOp.Value = Int32.Parse(allLines[5]);
+            madOp.Value = Int32.Parse(allLines[6]);
+            husholdningOp.Value = Int32.Parse(allLines[7]);
+            fjernsynOp.Value = Int32.Parse(allLines[8]);
+            internetOp.Value = Int32.Parse(allLines[9]);
+            netflixOp.Value = Int32.Parse(allLines[10]);
+            spotifyOp.Value = Int32.Parse(allLines[11]);
+            // mie økonomi
+            miePay.Value = Int32.Parse(allLines[12]);
+            mieSU.Value = Int32.Parse(allLines[13]);
+            mieTelefonOp.Value = Int32.Parse(allLines[14]);
+            mieDagligTransportOp.Value = Int32.Parse(allLines[15]);
+            mieLinserOp.Value = Int32.Parse(allLines[16]);
+            mieAndenTransportOp.Value = Int32.Parse(allLines[17]);
+            mieTandlageOp.Value = Int32.Parse(allLines[18]);
+            mieFrisorOp.Value = Int32.Parse(allLines[19]);
+            mieTojOp.Value = Int32.Parse(allLines[20]);
+            mieHyggeOp.Value = Int32.Parse(allLines[21]);
+            miePigeOp.Value = Int32.Parse(allLines[22]);
+            // mie skat
+            mieASkat.Value = Int32.Parse(allLines[23]);
+            MieAMBidrag.Value = Int32.Parse(allLines[24]);
+            MieFradrag.Value = Int32.Parse(allLines[25]);
+            // filip økonomi
+            numericUpDown11.Value = Int32.Parse(allLines[26]);
+            numericUpDown10.Value = Int32.Parse(allLines[27]);
+            numericUpDown9.Value = Int32.Parse(allLines[28]);
+            numericUpDown8.Value = Int32.Parse(allLines[29]);
+            numericUpDown5.Value = Int32.Parse(allLines[30]);
+            numericUpDown6.Value = Int32.Parse(allLines[31]);
+            numericUpDown4.Value = Int32.Parse(allLines[32]);
+            numericUpDown3.Value = Int32.Parse(allLines[33]);
+            numericUpDown2.Value = Int32.Parse(allLines[34]);
+            // filip skat
+            filipASkatOp.Value = Int32.Parse(allLines[35]);
+            filipAMOp.Value = Int32.Parse(allLines[36]);
+            filipFradragOp.Value = Int32.Parse(allLines[37]);
+
+            Syncronize();
+        }
+
+
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e) {
             mie.aSkat = (float)mieASkat.Value;
@@ -61,6 +165,7 @@ namespace Budget
             mie.transportDaily = (float)mieDagligTransportOp.Value;
             mie.lenses = (float)mieLinserOp.Value;
             mie.transportOther = (float)mieAndenTransportOp.Value;
+            mie.hair = (float)mieFrisorOp.Value;
             mie.dentist = (float)mieTandlageOp.Value;
             mie.clothes = (float)mieTojOp.Value;
             mie.fun = (float)mieHyggeOp.Value;
@@ -86,6 +191,8 @@ namespace Budget
             filip.aSkat = (float)filipASkatOp.Value;
             filip.am = (float)filipAMOp.Value;
             filip.fradrag = (float)filipFradragOp.Value;
+
+            // Økonomi numerics
             filip.pay = (float)numericUpDown11.Value;
             filip.su = (float)numericUpDown10.Value;
             filip.phone = (float)numericUpDown9.Value;
@@ -95,8 +202,6 @@ namespace Budget
             filip.hair = (float)numericUpDown4.Value;
             filip.clothes = (float)numericUpDown3.Value;
             filip.fun = (float)numericUpDown2.Value;
-
-            // Økonomi numerics
 
             filip.Calculate();
             // skat labels
@@ -301,6 +406,14 @@ namespace Budget
 
         private void groupBox10_Enter(object sender, EventArgs e) {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e) {
+            SaveFile();
+        }
+
+        private void button7_Click(object sender, EventArgs e) {
+            LoadFile();
         }
     }
 }

@@ -29,6 +29,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Fælles = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.totalTilbageLabel = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.tilbageKapital1Label = new System.Windows.Forms.Label();
@@ -183,6 +184,7 @@
             this.label52 = new System.Windows.Forms.Label();
             this.filipFradragOp = new System.Windows.Forms.NumericUpDown();
             this.button4 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Fælles.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -255,6 +257,8 @@
             // 
             // Fælles
             // 
+            this.Fælles.Controls.Add(this.button7);
+            this.Fælles.Controls.Add(this.button6);
             this.Fælles.Controls.Add(this.totalTilbageLabel);
             this.Fælles.Controls.Add(this.label66);
             this.Fælles.Controls.Add(this.tilbageKapital1Label);
@@ -270,6 +274,16 @@
             this.Fælles.TabIndex = 0;
             this.Fælles.Text = "Fælles Økonomi";
             this.Fælles.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(460, 283);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(83, 39);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Save";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // totalTilbageLabel
             // 
@@ -2142,6 +2156,16 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(460, 333);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(83, 41);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Load";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2384,6 +2408,8 @@
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 
