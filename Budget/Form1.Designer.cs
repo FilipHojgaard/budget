@@ -27,9 +27,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Fælles = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
@@ -109,7 +109,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.mieSkat = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -133,7 +132,6 @@
             this.MieAMBidrag = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.MieFradrag = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
             this.filipØkonomi = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -163,7 +161,6 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.filipSkat = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label51 = new System.Windows.Forms.Label();
@@ -187,10 +184,8 @@
             this.filipAMOp = new System.Windows.Forms.NumericUpDown();
             this.label52 = new System.Windows.Forms.Label();
             this.filipFradragOp = new System.Windows.Forms.NumericUpDown();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.UdgifterChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button8 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Fælles.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -261,17 +256,14 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(603, 665);
+            this.tabControl1.Size = new System.Drawing.Size(603, 650);
             this.tabControl1.TabIndex = 0;
             // 
             // Fælles
             // 
-            this.Fælles.Controls.Add(this.button7);
-            this.Fælles.Controls.Add(this.button6);
             this.Fælles.Controls.Add(this.totalTilbageLabel);
             this.Fælles.Controls.Add(this.label66);
             this.Fælles.Controls.Add(this.tilbageKapital1Label);
-            this.Fælles.Controls.Add(this.button5);
             this.Fælles.Controls.Add(this.groupBox5);
             this.Fælles.Controls.Add(this.label58);
             this.Fælles.Controls.Add(this.groupBox4);
@@ -279,14 +271,14 @@
             this.Fælles.Location = new System.Drawing.Point(4, 22);
             this.Fælles.Name = "Fælles";
             this.Fælles.Padding = new System.Windows.Forms.Padding(3);
-            this.Fælles.Size = new System.Drawing.Size(595, 639);
+            this.Fælles.Size = new System.Drawing.Size(595, 624);
             this.Fælles.TabIndex = 0;
             this.Fælles.Text = "Fælles Økonomi";
             this.Fælles.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(460, 333);
+            this.button7.Location = new System.Drawing.Point(522, 673);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(83, 41);
             this.button7.TabIndex = 9;
@@ -296,7 +288,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(460, 283);
+            this.button6.Location = new System.Drawing.Point(433, 673);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(83, 39);
             this.button6.TabIndex = 8;
@@ -308,7 +300,7 @@
             // 
             this.totalTilbageLabel.AutoSize = true;
             this.totalTilbageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTilbageLabel.Location = new System.Drawing.Point(325, 601);
+            this.totalTilbageLabel.Location = new System.Drawing.Point(316, 598);
             this.totalTilbageLabel.Name = "totalTilbageLabel";
             this.totalTilbageLabel.Size = new System.Drawing.Size(14, 13);
             this.totalTilbageLabel.TabIndex = 7;
@@ -318,7 +310,7 @@
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(184, 601);
+            this.label66.Location = new System.Drawing.Point(155, 598);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(103, 13);
             this.label66.TabIndex = 6;
@@ -328,7 +320,7 @@
             // 
             this.tilbageKapital1Label.AutoSize = true;
             this.tilbageKapital1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tilbageKapital1Label.Location = new System.Drawing.Point(322, 361);
+            this.tilbageKapital1Label.Location = new System.Drawing.Point(313, 362);
             this.tilbageKapital1Label.Name = "tilbageKapital1Label";
             this.tilbageKapital1Label.Size = new System.Drawing.Size(14, 13);
             this.tilbageKapital1Label.TabIndex = 5;
@@ -336,7 +328,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(451, 537);
+            this.button5.Location = new System.Drawing.Point(243, 668);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 48);
             this.button5.TabIndex = 4;
@@ -360,9 +352,9 @@
             this.groupBox5.Controls.Add(this.label61);
             this.groupBox5.Controls.Add(this.label60);
             this.groupBox5.Controls.Add(this.label59);
-            this.groupBox5.Location = new System.Drawing.Point(160, 388);
+            this.groupBox5.Location = new System.Drawing.Point(130, 388);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(270, 197);
+            this.groupBox5.Size = new System.Drawing.Size(320, 197);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Fælles Udgifter";
@@ -370,7 +362,7 @@
             // fallesUdgifterIAltLabel
             // 
             this.fallesUdgifterIAltLabel.AutoSize = true;
-            this.fallesUdgifterIAltLabel.Location = new System.Drawing.Point(165, 172);
+            this.fallesUdgifterIAltLabel.Location = new System.Drawing.Point(185, 172);
             this.fallesUdgifterIAltLabel.Name = "fallesUdgifterIAltLabel";
             this.fallesUdgifterIAltLabel.Size = new System.Drawing.Size(13, 13);
             this.fallesUdgifterIAltLabel.TabIndex = 19;
@@ -383,7 +375,7 @@
             0,
             0,
             0});
-            this.spotifyOp.Location = new System.Drawing.Point(165, 147);
+            this.spotifyOp.Location = new System.Drawing.Point(185, 147);
             this.spotifyOp.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -401,7 +393,7 @@
             0,
             0,
             0});
-            this.netflixOp.Location = new System.Drawing.Point(165, 122);
+            this.netflixOp.Location = new System.Drawing.Point(185, 122);
             this.netflixOp.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -419,7 +411,7 @@
             0,
             0,
             0});
-            this.internetOp.Location = new System.Drawing.Point(165, 99);
+            this.internetOp.Location = new System.Drawing.Point(185, 99);
             this.internetOp.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -437,7 +429,7 @@
             0,
             0,
             0});
-            this.fjernsynOp.Location = new System.Drawing.Point(165, 75);
+            this.fjernsynOp.Location = new System.Drawing.Point(185, 75);
             this.fjernsynOp.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -455,7 +447,7 @@
             0,
             0,
             0});
-            this.husholdningOp.Location = new System.Drawing.Point(165, 48);
+            this.husholdningOp.Location = new System.Drawing.Point(185, 48);
             this.husholdningOp.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -473,7 +465,7 @@
             0,
             0,
             0});
-            this.madOp.Location = new System.Drawing.Point(165, 23);
+            this.madOp.Location = new System.Drawing.Point(185, 23);
             this.madOp.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -552,7 +544,7 @@
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(184, 361);
+            this.label58.Location = new System.Drawing.Point(155, 362);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(115, 13);
             this.label58.TabIndex = 2;
@@ -572,9 +564,9 @@
             this.groupBox4.Controls.Add(this.label44);
             this.groupBox4.Controls.Add(this.label39);
             this.groupBox4.Controls.Add(this.label38);
-            this.groupBox4.Location = new System.Drawing.Point(160, 166);
+            this.groupBox4.Location = new System.Drawing.Point(130, 170);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(270, 180);
+            this.groupBox4.Size = new System.Drawing.Size(320, 180);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bolig Udgifter";
@@ -582,7 +574,7 @@
             // boligUdgifterIAlt
             // 
             this.boligUdgifterIAlt.AutoSize = true;
-            this.boligUdgifterIAlt.Location = new System.Drawing.Point(162, 156);
+            this.boligUdgifterIAlt.Location = new System.Drawing.Point(182, 156);
             this.boligUdgifterIAlt.Name = "boligUdgifterIAlt";
             this.boligUdgifterIAlt.Size = new System.Drawing.Size(13, 13);
             this.boligUdgifterIAlt.TabIndex = 11;
@@ -595,7 +587,7 @@
             0,
             0,
             0});
-            this.boligForsikringOp.Location = new System.Drawing.Point(165, 128);
+            this.boligForsikringOp.Location = new System.Drawing.Point(185, 128);
             this.boligForsikringOp.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -613,7 +605,7 @@
             0,
             0,
             0});
-            this.elektricitetOp.Location = new System.Drawing.Point(165, 104);
+            this.elektricitetOp.Location = new System.Drawing.Point(185, 104);
             this.elektricitetOp.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -631,7 +623,7 @@
             0,
             0,
             0});
-            this.vandOp.Location = new System.Drawing.Point(165, 78);
+            this.vandOp.Location = new System.Drawing.Point(185, 78);
             this.vandOp.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -649,7 +641,7 @@
             0,
             0,
             0});
-            this.varmeOp.Location = new System.Drawing.Point(165, 48);
+            this.varmeOp.Location = new System.Drawing.Point(185, 48);
             this.varmeOp.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -667,7 +659,7 @@
             0,
             0,
             0});
-            this.huslejeOp.Location = new System.Drawing.Point(165, 19);
+            this.huslejeOp.Location = new System.Drawing.Point(185, 19);
             this.huslejeOp.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -742,9 +734,9 @@
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Location = new System.Drawing.Point(160, 18);
+            this.groupBox3.Location = new System.Drawing.Point(130, 20);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(270, 142);
+            this.groupBox3.Size = new System.Drawing.Size(320, 142);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Indkomst";
@@ -752,7 +744,7 @@
             // fallesIndkomstLabel
             // 
             this.fallesIndkomstLabel.AutoSize = true;
-            this.fallesIndkomstLabel.Location = new System.Drawing.Point(165, 109);
+            this.fallesIndkomstLabel.Location = new System.Drawing.Point(185, 109);
             this.fallesIndkomstLabel.Name = "fallesIndkomstLabel";
             this.fallesIndkomstLabel.Size = new System.Drawing.Size(13, 13);
             this.fallesIndkomstLabel.TabIndex = 7;
@@ -765,7 +757,7 @@
             0,
             0,
             0});
-            this.boligTilskudOp.Location = new System.Drawing.Point(165, 78);
+            this.boligTilskudOp.Location = new System.Drawing.Point(185, 78);
             this.boligTilskudOp.Maximum = new decimal(new int[] {
             40000,
             0,
@@ -779,7 +771,7 @@
             // filipIndkomstLabel
             // 
             this.filipIndkomstLabel.AutoSize = true;
-            this.filipIndkomstLabel.Location = new System.Drawing.Point(162, 54);
+            this.filipIndkomstLabel.Location = new System.Drawing.Point(182, 54);
             this.filipIndkomstLabel.Name = "filipIndkomstLabel";
             this.filipIndkomstLabel.Size = new System.Drawing.Size(13, 13);
             this.filipIndkomstLabel.TabIndex = 5;
@@ -788,7 +780,7 @@
             // mieIndkomstLabel
             // 
             this.mieIndkomstLabel.AutoSize = true;
-            this.mieIndkomstLabel.Location = new System.Drawing.Point(162, 29);
+            this.mieIndkomstLabel.Location = new System.Drawing.Point(182, 29);
             this.mieIndkomstLabel.Name = "mieIndkomstLabel";
             this.mieIndkomstLabel.Size = new System.Drawing.Size(13, 13);
             this.mieIndkomstLabel.TabIndex = 4;
@@ -836,11 +828,10 @@
             this.mieØkonomi.Controls.Add(this.mieTotalLabel);
             this.mieØkonomi.Controls.Add(this.groupBox1);
             this.mieØkonomi.Controls.Add(this.label26);
-            this.mieØkonomi.Controls.Add(this.button2);
             this.mieØkonomi.Location = new System.Drawing.Point(4, 22);
             this.mieØkonomi.Name = "mieØkonomi";
             this.mieØkonomi.Padding = new System.Windows.Forms.Padding(3);
-            this.mieØkonomi.Size = new System.Drawing.Size(595, 639);
+            this.mieØkonomi.Size = new System.Drawing.Size(595, 624);
             this.mieØkonomi.TabIndex = 1;
             this.mieØkonomi.Text = "Mie Økonomi";
             this.mieØkonomi.UseVisualStyleBackColor = true;
@@ -1003,7 +994,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(32, 256);
+            this.label23.Location = new System.Drawing.Point(29, 255);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(73, 13);
             this.label23.TabIndex = 17;
@@ -1052,7 +1043,7 @@
             0,
             0,
             0});
-            this.mieTojOp.Location = new System.Drawing.Point(167, 180);
+            this.mieTojOp.Location = new System.Drawing.Point(167, 181);
             this.mieTojOp.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1070,7 +1061,7 @@
             0,
             0,
             0});
-            this.mieFrisorOp.Location = new System.Drawing.Point(167, 156);
+            this.mieFrisorOp.Location = new System.Drawing.Point(167, 157);
             this.mieFrisorOp.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1262,24 +1253,15 @@
             this.label26.TabIndex = 19;
             this.label26.Text = "Mie Individuel Økonomi";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(169, 499);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(234, 54);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Synkroniser";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // mieSkat
             // 
             this.mieSkat.Controls.Add(this.groupBox8);
             this.mieSkat.Controls.Add(this.groupBox7);
-            this.mieSkat.Controls.Add(this.button1);
+            this.mieSkat.Controls.Add(this.mieSkat7);
+            this.mieSkat.Controls.Add(this.label9);
             this.mieSkat.Location = new System.Drawing.Point(4, 22);
             this.mieSkat.Name = "mieSkat";
-            this.mieSkat.Size = new System.Drawing.Size(595, 639);
+            this.mieSkat.Size = new System.Drawing.Size(595, 624);
             this.mieSkat.TabIndex = 2;
             this.mieSkat.Text = "Mie Skat";
             this.mieSkat.UseVisualStyleBackColor = true;
@@ -1289,7 +1271,6 @@
             // 
             this.groupBox8.Controls.Add(this.label4);
             this.groupBox8.Controls.Add(this.label3);
-            this.groupBox8.Controls.Add(this.mieSkat7);
             this.groupBox8.Controls.Add(this.label5);
             this.groupBox8.Controls.Add(this.mieSkat6);
             this.groupBox8.Controls.Add(this.label6);
@@ -1298,12 +1279,11 @@
             this.groupBox8.Controls.Add(this.mieSkat4);
             this.groupBox8.Controls.Add(this.label8);
             this.groupBox8.Controls.Add(this.mieSkat3);
-            this.groupBox8.Controls.Add(this.label9);
             this.groupBox8.Controls.Add(this.mieSkat2);
             this.groupBox8.Controls.Add(this.mieSkat1);
-            this.groupBox8.Location = new System.Drawing.Point(132, 193);
+            this.groupBox8.Location = new System.Drawing.Point(130, 165);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(291, 267);
+            this.groupBox8.Size = new System.Drawing.Size(320, 235);
             this.groupBox8.TabIndex = 22;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Beregning";
@@ -1330,7 +1310,7 @@
             // 
             this.mieSkat7.AutoSize = true;
             this.mieSkat7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mieSkat7.Location = new System.Drawing.Point(243, 235);
+            this.mieSkat7.Location = new System.Drawing.Point(373, 420);
             this.mieSkat7.Name = "mieSkat7";
             this.mieSkat7.Size = new System.Drawing.Size(14, 13);
             this.mieSkat7.TabIndex = 20;
@@ -1348,7 +1328,7 @@
             // mieSkat6
             // 
             this.mieSkat6.AutoSize = true;
-            this.mieSkat6.Location = new System.Drawing.Point(243, 204);
+            this.mieSkat6.Location = new System.Drawing.Point(244, 204);
             this.mieSkat6.Name = "mieSkat6";
             this.mieSkat6.Size = new System.Drawing.Size(13, 13);
             this.mieSkat6.TabIndex = 19;
@@ -1366,7 +1346,7 @@
             // mieSkat5
             // 
             this.mieSkat5.AutoSize = true;
-            this.mieSkat5.Location = new System.Drawing.Point(243, 169);
+            this.mieSkat5.Location = new System.Drawing.Point(244, 169);
             this.mieSkat5.Name = "mieSkat5";
             this.mieSkat5.Size = new System.Drawing.Size(13, 13);
             this.mieSkat5.TabIndex = 18;
@@ -1384,7 +1364,7 @@
             // mieSkat4
             // 
             this.mieSkat4.AutoSize = true;
-            this.mieSkat4.Location = new System.Drawing.Point(243, 134);
+            this.mieSkat4.Location = new System.Drawing.Point(244, 134);
             this.mieSkat4.Name = "mieSkat4";
             this.mieSkat4.Size = new System.Drawing.Size(13, 13);
             this.mieSkat4.TabIndex = 17;
@@ -1402,7 +1382,7 @@
             // mieSkat3
             // 
             this.mieSkat3.AutoSize = true;
-            this.mieSkat3.Location = new System.Drawing.Point(243, 100);
+            this.mieSkat3.Location = new System.Drawing.Point(244, 100);
             this.mieSkat3.Name = "mieSkat3";
             this.mieSkat3.Size = new System.Drawing.Size(13, 13);
             this.mieSkat3.TabIndex = 16;
@@ -1412,7 +1392,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(24, 235);
+            this.label9.Location = new System.Drawing.Point(154, 420);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(201, 13);
             this.label9.TabIndex = 12;
@@ -1421,7 +1401,7 @@
             // mieSkat2
             // 
             this.mieSkat2.AutoSize = true;
-            this.mieSkat2.Location = new System.Drawing.Point(243, 66);
+            this.mieSkat2.Location = new System.Drawing.Point(244, 66);
             this.mieSkat2.Name = "mieSkat2";
             this.mieSkat2.Size = new System.Drawing.Size(13, 13);
             this.mieSkat2.TabIndex = 15;
@@ -1430,7 +1410,7 @@
             // mieSkat1
             // 
             this.mieSkat1.AutoSize = true;
-            this.mieSkat1.Location = new System.Drawing.Point(243, 32);
+            this.mieSkat1.Location = new System.Drawing.Point(244, 32);
             this.mieSkat1.Name = "mieSkat1";
             this.mieSkat1.Size = new System.Drawing.Size(13, 13);
             this.mieSkat1.TabIndex = 14;
@@ -1444,12 +1424,12 @@
             this.groupBox7.Controls.Add(this.MieAMBidrag);
             this.groupBox7.Controls.Add(this.label2);
             this.groupBox7.Controls.Add(this.MieFradrag);
-            this.groupBox7.Location = new System.Drawing.Point(132, 24);
+            this.groupBox7.Location = new System.Drawing.Point(130, 20);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(291, 163);
+            this.groupBox7.Size = new System.Drawing.Size(320, 135);
             this.groupBox7.TabIndex = 21;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Variable";
+            this.groupBox7.Text = "Skatteprocenter og fradrag";
             // 
             // mieaskatlabel
             // 
@@ -1462,7 +1442,7 @@
             // 
             // mieASkat
             // 
-            this.mieASkat.Location = new System.Drawing.Point(179, 24);
+            this.mieASkat.Location = new System.Drawing.Point(168, 21);
             this.mieASkat.Name = "mieASkat";
             this.mieASkat.Size = new System.Drawing.Size(77, 20);
             this.mieASkat.TabIndex = 1;
@@ -1484,7 +1464,7 @@
             // 
             // MieAMBidrag
             // 
-            this.MieAMBidrag.Location = new System.Drawing.Point(179, 62);
+            this.MieAMBidrag.Location = new System.Drawing.Point(168, 59);
             this.MieAMBidrag.Name = "MieAMBidrag";
             this.MieAMBidrag.Size = new System.Drawing.Size(77, 20);
             this.MieAMBidrag.TabIndex = 3;
@@ -1511,7 +1491,7 @@
             0,
             0,
             0});
-            this.MieFradrag.Location = new System.Drawing.Point(179, 105);
+            this.MieFradrag.Location = new System.Drawing.Point(168, 102);
             this.MieFradrag.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -1522,26 +1502,15 @@
             this.MieFradrag.TabIndex = 5;
             this.MieFradrag.ValueChanged += new System.EventHandler(this.MieFradrag_ValueChanged);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(187, 466);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 54);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Synkroniser";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // filipØkonomi
             // 
             this.filipØkonomi.Controls.Add(this.groupBox9);
             this.filipØkonomi.Controls.Add(this.filipTotalLabel);
             this.filipØkonomi.Controls.Add(this.groupBox2);
             this.filipØkonomi.Controls.Add(this.label37);
-            this.filipØkonomi.Controls.Add(this.button3);
             this.filipØkonomi.Location = new System.Drawing.Point(4, 22);
             this.filipØkonomi.Name = "filipØkonomi";
-            this.filipØkonomi.Size = new System.Drawing.Size(595, 639);
+            this.filipØkonomi.Size = new System.Drawing.Size(595, 624);
             this.filipØkonomi.TabIndex = 3;
             this.filipØkonomi.Text = "Filip Økonomi";
             this.filipØkonomi.UseVisualStyleBackColor = true;
@@ -1700,7 +1669,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(32, 256);
+            this.label27.Location = new System.Drawing.Point(29, 255);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(73, 13);
             this.label27.TabIndex = 17;
@@ -1713,7 +1682,7 @@
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(167, 206);
+            this.numericUpDown2.Location = new System.Drawing.Point(167, 181);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1731,7 +1700,7 @@
             0,
             0,
             0});
-            this.numericUpDown3.Location = new System.Drawing.Point(167, 180);
+            this.numericUpDown3.Location = new System.Drawing.Point(167, 157);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1749,7 +1718,7 @@
             0,
             0,
             0});
-            this.numericUpDown4.Location = new System.Drawing.Point(167, 156);
+            this.numericUpDown4.Location = new System.Drawing.Point(167, 133);
             this.numericUpDown4.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1767,7 +1736,7 @@
             0,
             0,
             0});
-            this.numericUpDown5.Location = new System.Drawing.Point(167, 108);
+            this.numericUpDown5.Location = new System.Drawing.Point(167, 83);
             this.numericUpDown5.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1785,7 +1754,7 @@
             0,
             0,
             0});
-            this.numericUpDown6.Location = new System.Drawing.Point(167, 133);
+            this.numericUpDown6.Location = new System.Drawing.Point(167, 108);
             this.numericUpDown6.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1835,7 +1804,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(29, 205);
+            this.label29.Location = new System.Drawing.Point(29, 182);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(38, 13);
             this.label29.TabIndex = 7;
@@ -1844,7 +1813,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(29, 182);
+            this.label30.Location = new System.Drawing.Point(29, 159);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(22, 13);
             this.label30.TabIndex = 6;
@@ -1853,7 +1822,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(29, 158);
+            this.label31.Location = new System.Drawing.Point(29, 135);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(32, 13);
             this.label31.TabIndex = 5;
@@ -1862,7 +1831,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(29, 135);
+            this.label32.Location = new System.Drawing.Point(29, 110);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(56, 13);
             this.label32.TabIndex = 4;
@@ -1871,7 +1840,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(29, 110);
+            this.label33.Location = new System.Drawing.Point(29, 85);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(86, 13);
             this.label33.TabIndex = 3;
@@ -1905,24 +1874,15 @@
             this.label37.TabIndex = 31;
             this.label37.Text = "Filip Individuel Økonomi";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(179, 503);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(234, 54);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Synkroniser";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // filipSkat
             // 
             this.filipSkat.Controls.Add(this.groupBox11);
             this.filipSkat.Controls.Add(this.groupBox10);
-            this.filipSkat.Controls.Add(this.button4);
+            this.filipSkat.Controls.Add(this.filipSkat7);
+            this.filipSkat.Controls.Add(this.label45);
             this.filipSkat.Location = new System.Drawing.Point(4, 22);
             this.filipSkat.Name = "filipSkat";
-            this.filipSkat.Size = new System.Drawing.Size(595, 639);
+            this.filipSkat.Size = new System.Drawing.Size(595, 624);
             this.filipSkat.TabIndex = 4;
             this.filipSkat.Text = "Filip Skat";
             this.filipSkat.UseVisualStyleBackColor = true;
@@ -1931,7 +1891,6 @@
             // 
             this.groupBox11.Controls.Add(this.label51);
             this.groupBox11.Controls.Add(this.label50);
-            this.groupBox11.Controls.Add(this.filipSkat7);
             this.groupBox11.Controls.Add(this.label49);
             this.groupBox11.Controls.Add(this.filipSkat6);
             this.groupBox11.Controls.Add(this.label48);
@@ -1940,12 +1899,11 @@
             this.groupBox11.Controls.Add(this.filipSkat4);
             this.groupBox11.Controls.Add(this.label46);
             this.groupBox11.Controls.Add(this.filipSkat3);
-            this.groupBox11.Controls.Add(this.label45);
             this.groupBox11.Controls.Add(this.filipSkat2);
             this.groupBox11.Controls.Add(this.filipSkat1);
-            this.groupBox11.Location = new System.Drawing.Point(157, 185);
+            this.groupBox11.Location = new System.Drawing.Point(130, 165);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(300, 271);
+            this.groupBox11.Size = new System.Drawing.Size(320, 235);
             this.groupBox11.TabIndex = 43;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Beregning";
@@ -1953,7 +1911,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(16, 31);
+            this.label51.Location = new System.Drawing.Point(24, 32);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(25, 13);
             this.label51.TabIndex = 27;
@@ -1962,7 +1920,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(16, 65);
+            this.label50.Location = new System.Drawing.Point(24, 66);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(56, 13);
             this.label50.TabIndex = 28;
@@ -1972,7 +1930,7 @@
             // 
             this.filipSkat7.AutoSize = true;
             this.filipSkat7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filipSkat7.Location = new System.Drawing.Point(237, 234);
+            this.filipSkat7.Location = new System.Drawing.Point(373, 420);
             this.filipSkat7.Name = "filipSkat7";
             this.filipSkat7.Size = new System.Drawing.Size(14, 13);
             this.filipSkat7.TabIndex = 41;
@@ -1981,7 +1939,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(16, 99);
+            this.label49.Location = new System.Drawing.Point(24, 100);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(102, 13);
             this.label49.TabIndex = 29;
@@ -1990,7 +1948,7 @@
             // filipSkat6
             // 
             this.filipSkat6.AutoSize = true;
-            this.filipSkat6.Location = new System.Drawing.Point(237, 203);
+            this.filipSkat6.Location = new System.Drawing.Point(244, 204);
             this.filipSkat6.Name = "filipSkat6";
             this.filipSkat6.Size = new System.Drawing.Size(13, 13);
             this.filipSkat6.TabIndex = 40;
@@ -1999,7 +1957,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(16, 133);
+            this.label48.Location = new System.Drawing.Point(24, 134);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(88, 13);
             this.label48.TabIndex = 30;
@@ -2008,7 +1966,7 @@
             // filipSkat5
             // 
             this.filipSkat5.AutoSize = true;
-            this.filipSkat5.Location = new System.Drawing.Point(237, 168);
+            this.filipSkat5.Location = new System.Drawing.Point(244, 169);
             this.filipSkat5.Name = "filipSkat5";
             this.filipSkat5.Size = new System.Drawing.Size(13, 13);
             this.filipSkat5.TabIndex = 39;
@@ -2017,7 +1975,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(16, 168);
+            this.label47.Location = new System.Drawing.Point(24, 169);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(84, 13);
             this.label47.TabIndex = 31;
@@ -2026,7 +1984,7 @@
             // filipSkat4
             // 
             this.filipSkat4.AutoSize = true;
-            this.filipSkat4.Location = new System.Drawing.Point(237, 133);
+            this.filipSkat4.Location = new System.Drawing.Point(244, 134);
             this.filipSkat4.Name = "filipSkat4";
             this.filipSkat4.Size = new System.Drawing.Size(13, 13);
             this.filipSkat4.TabIndex = 38;
@@ -2035,7 +1993,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(16, 203);
+            this.label46.Location = new System.Drawing.Point(24, 204);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(106, 13);
             this.label46.TabIndex = 32;
@@ -2044,7 +2002,7 @@
             // filipSkat3
             // 
             this.filipSkat3.AutoSize = true;
-            this.filipSkat3.Location = new System.Drawing.Point(237, 99);
+            this.filipSkat3.Location = new System.Drawing.Point(244, 100);
             this.filipSkat3.Name = "filipSkat3";
             this.filipSkat3.Size = new System.Drawing.Size(13, 13);
             this.filipSkat3.TabIndex = 37;
@@ -2054,7 +2012,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(16, 234);
+            this.label45.Location = new System.Drawing.Point(154, 420);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(201, 13);
             this.label45.TabIndex = 33;
@@ -2063,7 +2021,7 @@
             // filipSkat2
             // 
             this.filipSkat2.AutoSize = true;
-            this.filipSkat2.Location = new System.Drawing.Point(237, 65);
+            this.filipSkat2.Location = new System.Drawing.Point(244, 66);
             this.filipSkat2.Name = "filipSkat2";
             this.filipSkat2.Size = new System.Drawing.Size(13, 13);
             this.filipSkat2.TabIndex = 36;
@@ -2072,7 +2030,7 @@
             // filipSkat1
             // 
             this.filipSkat1.AutoSize = true;
-            this.filipSkat1.Location = new System.Drawing.Point(237, 31);
+            this.filipSkat1.Location = new System.Drawing.Point(244, 32);
             this.filipSkat1.Name = "filipSkat1";
             this.filipSkat1.Size = new System.Drawing.Size(13, 13);
             this.filipSkat1.TabIndex = 35;
@@ -2086,18 +2044,18 @@
             this.groupBox10.Controls.Add(this.filipAMOp);
             this.groupBox10.Controls.Add(this.label52);
             this.groupBox10.Controls.Add(this.filipFradragOp);
-            this.groupBox10.Location = new System.Drawing.Point(157, 15);
+            this.groupBox10.Location = new System.Drawing.Point(130, 20);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(300, 164);
+            this.groupBox10.Size = new System.Drawing.Size(320, 135);
             this.groupBox10.TabIndex = 42;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Variable";
+            this.groupBox10.Text = "Skatteprocenter og fradrag";
             this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(33, 32);
+            this.label54.Location = new System.Drawing.Point(24, 26);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(39, 13);
             this.label54.TabIndex = 21;
@@ -2105,7 +2063,7 @@
             // 
             // filipASkatOp
             // 
-            this.filipASkatOp.Location = new System.Drawing.Point(167, 25);
+            this.filipASkatOp.Location = new System.Drawing.Point(168, 21);
             this.filipASkatOp.Name = "filipASkatOp";
             this.filipASkatOp.Size = new System.Drawing.Size(77, 20);
             this.filipASkatOp.TabIndex = 22;
@@ -2119,7 +2077,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(33, 70);
+            this.label53.Location = new System.Drawing.Point(24, 64);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(56, 13);
             this.label53.TabIndex = 23;
@@ -2127,7 +2085,7 @@
             // 
             // filipAMOp
             // 
-            this.filipAMOp.Location = new System.Drawing.Point(167, 63);
+            this.filipAMOp.Location = new System.Drawing.Point(168, 59);
             this.filipAMOp.Name = "filipAMOp";
             this.filipAMOp.Size = new System.Drawing.Size(77, 20);
             this.filipAMOp.TabIndex = 24;
@@ -2141,7 +2099,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(33, 113);
+            this.label52.Location = new System.Drawing.Point(24, 107);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(43, 13);
             this.label52.TabIndex = 25;
@@ -2154,7 +2112,7 @@
             0,
             0,
             0});
-            this.filipFradragOp.Location = new System.Drawing.Point(167, 106);
+            this.filipFradragOp.Location = new System.Drawing.Point(168, 102);
             this.filipFradragOp.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -2165,59 +2123,41 @@
             this.filipFradragOp.TabIndex = 26;
             this.filipFradragOp.ValueChanged += new System.EventHandler(this.filipFradragOp_ValueChanged);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(193, 475);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(214, 54);
-            this.button4.TabIndex = 34;
-            this.button4.Text = "Synkroniser";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button8);
             this.tabPage1.Controls.Add(this.UdgifterChart);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(595, 639);
+            this.tabPage1.Size = new System.Drawing.Size(595, 624);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Statistik";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // UdgifterChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.UdgifterChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.UdgifterChart.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.UdgifterChart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.UdgifterChart.Legends.Add(legend6);
             this.UdgifterChart.Location = new System.Drawing.Point(39, 31);
             this.UdgifterChart.Name = "UdgifterChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.UdgifterChart.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.UdgifterChart.Series.Add(series6);
             this.UdgifterChart.Size = new System.Drawing.Size(516, 466);
             this.UdgifterChart.TabIndex = 0;
             this.UdgifterChart.Text = "chart1";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(232, 573);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(107, 36);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Synkroniser";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 682);
+            this.ClientSize = new System.Drawing.Size(620, 721);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -2262,6 +2202,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mieDagligTransportOp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mieTelefonOp)).EndInit();
             this.mieSkat.ResumeLayout(false);
+            this.mieSkat.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -2285,6 +2226,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
             this.filipSkat.ResumeLayout(false);
+            this.filipSkat.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -2326,8 +2268,6 @@
         private System.Windows.Forms.Label mieSkat3;
         private System.Windows.Forms.Label mieSkat2;
         private System.Windows.Forms.Label mieSkat1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label mieAfterTax;
         private System.Windows.Forms.Label mieBeforeTax;
         private System.Windows.Forms.NumericUpDown mieSU;
@@ -2378,7 +2318,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label filipAfterTax;
         private System.Windows.Forms.Label filipBeforeTax;
         private System.Windows.Forms.NumericUpDown numericUpDown10;
@@ -2394,7 +2333,6 @@
         private System.Windows.Forms.Label filipSkat3;
         private System.Windows.Forms.Label filipSkat2;
         private System.Windows.Forms.Label filipSkat1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
@@ -2459,7 +2397,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataVisualization.Charting.Chart UdgifterChart;
     }
 }
