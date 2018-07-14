@@ -27,8 +27,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Fælles = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.totalTilbageLabel = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
@@ -184,7 +188,9 @@
             this.label52 = new System.Windows.Forms.Label();
             this.filipFradragOp = new System.Windows.Forms.NumericUpDown();
             this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.UdgifterChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button8 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Fælles.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -240,6 +246,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.filipASkatOp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filipAMOp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filipFradragOp)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UdgifterChart)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -249,6 +257,7 @@
             this.tabControl1.Controls.Add(this.mieSkat);
             this.tabControl1.Controls.Add(this.filipØkonomi);
             this.tabControl1.Controls.Add(this.filipSkat);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -274,6 +283,16 @@
             this.Fælles.TabIndex = 0;
             this.Fælles.Text = "Fælles Økonomi";
             this.Fælles.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(460, 333);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(83, 41);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Load";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -836,9 +855,9 @@
             this.groupBox6.Controls.Add(this.mieAfterTax);
             this.groupBox6.Controls.Add(this.mieSU);
             this.groupBox6.Controls.Add(this.mieBeforeTax);
-            this.groupBox6.Location = new System.Drawing.Point(123, 20);
+            this.groupBox6.Location = new System.Drawing.Point(130, 20);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(319, 136);
+            this.groupBox6.Size = new System.Drawing.Size(320, 135);
             this.groupBox6.TabIndex = 21;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Indkomst";
@@ -965,9 +984,9 @@
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(123, 162);
+            this.groupBox1.Location = new System.Drawing.Point(130, 165);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(319, 289);
+            this.groupBox1.Size = new System.Drawing.Size(320, 285);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Udgifter";
@@ -1537,9 +1556,9 @@
             this.groupBox9.Controls.Add(this.filipAfterTax);
             this.groupBox9.Controls.Add(this.numericUpDown10);
             this.groupBox9.Controls.Add(this.filipBeforeTax);
-            this.groupBox9.Location = new System.Drawing.Point(133, 16);
+            this.groupBox9.Location = new System.Drawing.Point(130, 20);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(319, 144);
+            this.groupBox9.Size = new System.Drawing.Size(320, 135);
             this.groupBox9.TabIndex = 33;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Indkomst";
@@ -1547,7 +1566,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(25, 25);
+            this.label43.Location = new System.Drawing.Point(29, 19);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(25, 13);
             this.label43.TabIndex = 21;
@@ -1556,7 +1575,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(25, 54);
+            this.label42.Location = new System.Drawing.Point(29, 48);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(22, 13);
             this.label42.TabIndex = 22;
@@ -1565,7 +1584,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(25, 83);
+            this.label41.Location = new System.Drawing.Point(29, 77);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(88, 13);
             this.label41.TabIndex = 23;
@@ -1574,7 +1593,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(25, 116);
+            this.label40.Location = new System.Drawing.Point(29, 110);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(54, 13);
             this.label40.TabIndex = 24;
@@ -1587,7 +1606,7 @@
             0,
             0,
             0});
-            this.numericUpDown11.Location = new System.Drawing.Point(163, 25);
+            this.numericUpDown11.Location = new System.Drawing.Point(167, 19);
             this.numericUpDown11.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -1601,7 +1620,7 @@
             // filipAfterTax
             // 
             this.filipAfterTax.AutoSize = true;
-            this.filipAfterTax.Location = new System.Drawing.Point(160, 116);
+            this.filipAfterTax.Location = new System.Drawing.Point(164, 110);
             this.filipAfterTax.Name = "filipAfterTax";
             this.filipAfterTax.Size = new System.Drawing.Size(13, 13);
             this.filipAfterTax.TabIndex = 28;
@@ -1614,7 +1633,7 @@
             0,
             0,
             0});
-            this.numericUpDown10.Location = new System.Drawing.Point(163, 51);
+            this.numericUpDown10.Location = new System.Drawing.Point(167, 45);
             this.numericUpDown10.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -1628,7 +1647,7 @@
             // filipBeforeTax
             // 
             this.filipBeforeTax.AutoSize = true;
-            this.filipBeforeTax.Location = new System.Drawing.Point(160, 83);
+            this.filipBeforeTax.Location = new System.Drawing.Point(164, 77);
             this.filipBeforeTax.Name = "filipBeforeTax";
             this.filipBeforeTax.Size = new System.Drawing.Size(13, 13);
             this.filipBeforeTax.TabIndex = 27;
@@ -1662,9 +1681,9 @@
             this.groupBox2.Controls.Add(this.label33);
             this.groupBox2.Controls.Add(this.label35);
             this.groupBox2.Controls.Add(this.label36);
-            this.groupBox2.Location = new System.Drawing.Point(133, 166);
+            this.groupBox2.Location = new System.Drawing.Point(130, 165);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(319, 289);
+            this.groupBox2.Size = new System.Drawing.Size(320, 285);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Udgifter";
@@ -2156,15 +2175,42 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button7
+            // tabPage1
             // 
-            this.button7.Location = new System.Drawing.Point(460, 333);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 41);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Load";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.tabPage1.Controls.Add(this.button8);
+            this.tabPage1.Controls.Add(this.UdgifterChart);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(595, 639);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "Statistik";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // UdgifterChart
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.UdgifterChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.UdgifterChart.Legends.Add(legend2);
+            this.UdgifterChart.Location = new System.Drawing.Point(39, 31);
+            this.UdgifterChart.Name = "UdgifterChart";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.UdgifterChart.Series.Add(series2);
+            this.UdgifterChart.Size = new System.Drawing.Size(516, 466);
+            this.UdgifterChart.TabIndex = 0;
+            this.UdgifterChart.Text = "chart1";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(232, 573);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(107, 36);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Synkroniser";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form1
             // 
@@ -2246,6 +2292,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.filipASkatOp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filipAMOp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filipFradragOp)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.UdgifterChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2410,6 +2458,9 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataVisualization.Charting.Chart UdgifterChart;
     }
 }
 

@@ -21,6 +21,37 @@ namespace Budget
             InitializeComponent();
         }
 
+        public void DrawCharts() {
+            // clearer series og laver en ny der hedder "abe"
+            UdgifterChart.Series.Clear();
+            UdgifterChart.Legends.Clear();
+            UdgifterChart.Series.Add("udgifter");
+
+            // make it look good
+            UdgifterChart.Legends.Add("Udgifter");
+            UdgifterChart.Legends[0].LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Table;
+            UdgifterChart.Legends[0].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            UdgifterChart.Legends[0].Alignment = StringAlignment.Center;
+            UdgifterChart.Legends[0].Title = "Udgifter";
+            UdgifterChart.Legends[0].BorderColor = Color.Black;
+
+            // sætter typen for "abe" series til at være en pie chart.
+            UdgifterChart.Series["udgifter"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            // indsætter data til "abe"
+            UdgifterChart.Series["udgifter"].Points.AddXY("Bolig Udgifter", mutual.apartmentTotal);
+            UdgifterChart.Series["udgifter"].Points.AddXY("Fælles udgifter", mutual.mutualOutcomeTotal);
+            UdgifterChart.Series["udgifter"].Points.AddXY("Mie Udgifter", mie.outcome);
+            UdgifterChart.Series["udgifter"].Points.AddXY("Filip Udgifter", filip.outcome);
+            //UdgifterChart.Series["udgifter"].Points.AddXY("Bolig Udgifter" + " #PERCENT{P2}", mutual.apartmentTotal);
+            //UdgifterChart.Series["udgifter"].Points.AddXY("Fælles udgifter" + " #PERCENT{P2}", mutual.mutualOutcomeTotal);
+            //UdgifterChart.Series["udgifter"].Points.AddXY("Mie Udgifter" + " #PERCENT{P2}", mie.outcome);
+            //UdgifterChart.Series["udgifter"].Points.AddXY("Filip Udgifter" + " #PERCENT{P2}", filip.outcome);
+
+            //UdgifterChart.Series["udgifter"].IsValueShownAsLabel = true;
+            //UdgifterChart.Series["udgifter"].Label = "#PERCENT{P2}";
+        }
+
+
         public void SaveFile() {
             Console.WriteLine("Attempting to save budget file");
             StreamWriter writer = new StreamWriter(@"budget_file_01.txt", false);
@@ -69,7 +100,8 @@ namespace Budget
             writer.WriteLine(filipAMOp.Value);
             writer.WriteLine(filipFradragOp.Value);
             writer.Close();
-            MessageBox.Show("Saved succesfully");
+            MessageBox.Show("Saved succesfully", "Saving Budget");
+            Console.WriteLine("Saved succesfully");
         }
 
         public void LoadFile() {
@@ -244,6 +276,9 @@ namespace Budget
             tilbageKapital1Label.Text = (mutual.totalMutualIncome - mutual.apartmentTotal).ToString();
             fallesUdgifterIAltLabel.Text = mutual.mutualOutcomeTotal.ToString();
             totalTilbageLabel.Text = mutual.total.ToString();
+
+            // statistics
+            DrawCharts();
         }
 
         private void miePay_ValueChanged(object sender, EventArgs e) {
@@ -414,6 +449,10 @@ namespace Budget
 
         private void button7_Click(object sender, EventArgs e) {
             LoadFile();
+        }
+
+        private void button8_Click(object sender, EventArgs e) {
+            Syncronize();
         }
     }
 }
