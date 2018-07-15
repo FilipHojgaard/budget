@@ -54,7 +54,7 @@ namespace Budget
 
         public void SaveFile() {
             Console.WriteLine("Attempting to save budget file");
-            StreamWriter writer = new StreamWriter(@"budget_file_01.txt", false);
+            StreamWriter writer = new StreamWriter(saveNameBox.Text, false);
             // saves every bit of information on each line
             // fælles økonomi
             writer.WriteLine(boligTilskudOp.Value);
@@ -106,7 +106,7 @@ namespace Budget
 
         public void LoadFile() {
             Console.WriteLine("attempting to load budget file");
-            string[] allLines = File.ReadAllLines(@"budget_file_01.txt");
+            string[] allLines = File.ReadAllLines(saveNameBox.Text);
             // fælles økonomi
             boligTilskudOp.Value = Int32.Parse(allLines[0]);
             huslejeOp.Value = Int32.Parse(allLines[1]);

@@ -27,17 +27,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Fælles = new System.Windows.Forms.TabPage();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.totalTilbageLabel = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.tilbageKapital1Label = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.fallesUdgifterIAltLabel = new System.Windows.Forms.Label();
             this.spotifyOp = new System.Windows.Forms.NumericUpDown();
@@ -113,7 +110,6 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.mieSkat7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.mieSkat6 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -122,7 +118,6 @@
             this.mieSkat4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.mieSkat3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.mieSkat2 = new System.Windows.Forms.Label();
             this.mieSkat1 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -132,6 +127,8 @@
             this.MieAMBidrag = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.MieFradrag = new System.Windows.Forms.NumericUpDown();
+            this.mieSkat7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.filipØkonomi = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -165,7 +162,6 @@
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label51 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
-            this.filipSkat7 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.filipSkat6 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -174,7 +170,6 @@
             this.filipSkat4 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.filipSkat3 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
             this.filipSkat2 = new System.Windows.Forms.Label();
             this.filipSkat1 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -184,8 +179,15 @@
             this.filipAMOp = new System.Windows.Forms.NumericUpDown();
             this.label52 = new System.Windows.Forms.Label();
             this.filipFradragOp = new System.Windows.Forms.NumericUpDown();
+            this.filipSkat7 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.UdgifterChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label67 = new System.Windows.Forms.Label();
+            this.saveNameBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.Fælles.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -276,26 +278,6 @@
             this.Fælles.Text = "Fælles Økonomi";
             this.Fælles.UseVisualStyleBackColor = true;
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(522, 673);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 41);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Load";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(433, 673);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 39);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Save";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // totalTilbageLabel
             // 
             this.totalTilbageLabel.AutoSize = true;
@@ -325,16 +307,6 @@
             this.tilbageKapital1Label.Size = new System.Drawing.Size(14, 13);
             this.tilbageKapital1Label.TabIndex = 5;
             this.tilbageKapital1Label.Text = "0";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(243, 668);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(121, 48);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Synkroniser";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox5
             // 
@@ -1306,16 +1278,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Løn";
             // 
-            // mieSkat7
-            // 
-            this.mieSkat7.AutoSize = true;
-            this.mieSkat7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mieSkat7.Location = new System.Drawing.Point(373, 420);
-            this.mieSkat7.Name = "mieSkat7";
-            this.mieSkat7.Size = new System.Drawing.Size(14, 13);
-            this.mieSkat7.TabIndex = 20;
-            this.mieSkat7.Text = "0";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1387,16 +1349,6 @@
             this.mieSkat3.Size = new System.Drawing.Size(13, 13);
             this.mieSkat3.TabIndex = 16;
             this.mieSkat3.Text = "0";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(154, 420);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(201, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Løn tilbage efter skat og fradraget";
             // 
             // mieSkat2
             // 
@@ -1501,6 +1453,26 @@
             this.MieFradrag.Size = new System.Drawing.Size(77, 20);
             this.MieFradrag.TabIndex = 5;
             this.MieFradrag.ValueChanged += new System.EventHandler(this.MieFradrag_ValueChanged);
+            // 
+            // mieSkat7
+            // 
+            this.mieSkat7.AutoSize = true;
+            this.mieSkat7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mieSkat7.Location = new System.Drawing.Point(373, 420);
+            this.mieSkat7.Name = "mieSkat7";
+            this.mieSkat7.Size = new System.Drawing.Size(14, 13);
+            this.mieSkat7.TabIndex = 20;
+            this.mieSkat7.Text = "0";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(154, 420);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(201, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Løn tilbage efter skat og fradraget";
             // 
             // filipØkonomi
             // 
@@ -1926,16 +1898,6 @@
             this.label50.TabIndex = 28;
             this.label50.Text = "AM-Bidrag";
             // 
-            // filipSkat7
-            // 
-            this.filipSkat7.AutoSize = true;
-            this.filipSkat7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filipSkat7.Location = new System.Drawing.Point(373, 420);
-            this.filipSkat7.Name = "filipSkat7";
-            this.filipSkat7.Size = new System.Drawing.Size(14, 13);
-            this.filipSkat7.TabIndex = 41;
-            this.filipSkat7.Text = "0";
-            // 
             // label49
             // 
             this.label49.AutoSize = true;
@@ -2007,16 +1969,6 @@
             this.filipSkat3.Size = new System.Drawing.Size(13, 13);
             this.filipSkat3.TabIndex = 37;
             this.filipSkat3.Text = "0";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(154, 420);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(201, 13);
-            this.label45.TabIndex = 33;
-            this.label45.Text = "Løn tilbage efter skat og fradraget";
             // 
             // filipSkat2
             // 
@@ -2123,6 +2075,26 @@
             this.filipFradragOp.TabIndex = 26;
             this.filipFradragOp.ValueChanged += new System.EventHandler(this.filipFradragOp_ValueChanged);
             // 
+            // filipSkat7
+            // 
+            this.filipSkat7.AutoSize = true;
+            this.filipSkat7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filipSkat7.Location = new System.Drawing.Point(373, 420);
+            this.filipSkat7.Name = "filipSkat7";
+            this.filipSkat7.Size = new System.Drawing.Size(14, 13);
+            this.filipSkat7.TabIndex = 41;
+            this.filipSkat7.Text = "0";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(154, 420);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(201, 13);
+            this.label45.TabIndex = 33;
+            this.label45.Text = "Løn tilbage efter skat og fradraget";
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.UdgifterChart);
@@ -2135,25 +2107,74 @@
             // 
             // UdgifterChart
             // 
-            chartArea6.Name = "ChartArea1";
-            this.UdgifterChart.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.UdgifterChart.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.UdgifterChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.UdgifterChart.Legends.Add(legend2);
             this.UdgifterChart.Location = new System.Drawing.Point(39, 31);
             this.UdgifterChart.Name = "UdgifterChart";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.UdgifterChart.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.UdgifterChart.Series.Add(series2);
             this.UdgifterChart.Size = new System.Drawing.Size(516, 466);
             this.UdgifterChart.TabIndex = 0;
             this.UdgifterChart.Text = "chart1";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(522, 673);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(83, 41);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Åben";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(433, 673);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(83, 39);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Gem";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(173, 669);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(121, 48);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Synkroniser";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(13, 699);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(138, 13);
+            this.label67.TabIndex = 10;
+            this.label67.Text = "Filip Højgaard Jensen, 2018";
+            // 
+            // saveNameBox
+            // 
+            this.saveNameBox.Location = new System.Drawing.Point(327, 684);
+            this.saveNameBox.Name = "saveNameBox";
+            this.saveNameBox.Size = new System.Drawing.Size(100, 20);
+            this.saveNameBox.TabIndex = 11;
+            this.saveNameBox.Text = "budget_file_01";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 721);
+            this.Controls.Add(this.saveNameBox);
+            this.Controls.Add(this.label67);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button6);
@@ -2237,6 +2258,7 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UdgifterChart)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2398,6 +2420,8 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataVisualization.Charting.Chart UdgifterChart;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.TextBox saveNameBox;
     }
 }
 
