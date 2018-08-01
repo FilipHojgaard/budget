@@ -11,21 +11,26 @@ using System.IO;
 
 namespace Budget
 {
-    public partial class Form1 : Form
-    {
-            Person mie = new Person();
-            Person filip = new Person();
-            Mutual mutual = new Mutual();
-        public Form1()
-        {
+    public partial class Form1 : Form {
+
+
+        Person mie = new Person();
+        Person filip = new Person();
+        Mutual mutual = new Mutual();
+
+        int[] altMad;
+
+
+        public Form1() {
             InitializeComponent();
         }
 
         public void DrawCharts() {
-            // clearer series og laver en ny der hedder "abe"
+            // clearer series og laver en ny der hedder "udgifter"
             UdgifterChart.Series.Clear();
             UdgifterChart.Legends.Clear();
             UdgifterChart.Series.Add("udgifter");
+
 
             // make it look good
             UdgifterChart.Legends.Add("Udgifter");
@@ -49,12 +54,20 @@ namespace Budget
 
             //UdgifterChart.Series["udgifter"].IsValueShownAsLabel = true;
             //UdgifterChart.Series["udgifter"].Label = "#PERCENT{P2}";
+
+            // Mad statistik
+            overallMadChart.Series.Clear();
+            overallMadChart.Legends.Clear();
+            overallMadChart.Series.Add("mad udgifter");
+            overallMadChart.Legends.Add("mad udgifterer");
+            overallMadChart.Series["mad udgifter"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            overallMadChart.Series["mad udgifter"].Points.DataBindY(altMad);
         }
 
 
         public void SaveFile() {
             Console.WriteLine("Attempting to save budget file");
-            StreamWriter writer = new StreamWriter(saveNameBox.Text, false);
+            StreamWriter writer = new StreamWriter(saveNameBox.Text + ".bf", false);
             // saves every bit of information on each line
             // fælles økonomi
             writer.WriteLine(boligTilskudOp.Value);
@@ -106,7 +119,7 @@ namespace Budget
 
         public void LoadFile() {
             Console.WriteLine("attempting to load budget file");
-            string[] allLines = File.ReadAllLines(saveNameBox.Text);
+            string[] allLines = File.ReadAllLines(saveNameBox.Text + ".bf");
             // fælles økonomi
             boligTilskudOp.Value = Int32.Parse(allLines[0]);
             huslejeOp.Value = Int32.Parse(allLines[1]);
@@ -184,6 +197,7 @@ namespace Budget
         }
 
         private void Syncronize() {
+            getStatistics();
             // MIE
             // Skat numerics
             mie.aSkat = (float)mieASkat.Value;
@@ -453,6 +467,24 @@ namespace Budget
 
         private void button8_Click(object sender, EventArgs e) {
             Syncronize();
+        }
+
+        // MÅNEDLIG STATISTIK
+        //Gemmer alle filerne der slutter med .bf i "allFiles".
+        // altMad er et array af længden af filer der slutter med .bf.
+        // allLines er alle linjerne i hver fil med .bf, men vi skal kun bruge det vi skal lave statistik af. Heraf "Mad" som er nummer [6].
+        // altMad arrayet gemmer hver fils mad budget. 
+        private void getStatistics(){
+            String[] allFiles = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.bf");
+            altMad = new int[allFiles.Length];
+            for (int i = 0; i < allFiles.Length; i++) {
+                Console.WriteLine(allFiles[i]);
+                string[] allLines = File.ReadAllLines(allFiles[i]);
+                altMad[i] = Int32.Parse(allLines[6]);
+                Console.WriteLine(altMad[i]);
+            }
+
+
         }
     }
 }

@@ -27,6 +27,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -181,13 +184,17 @@
             this.filipFradragOp = new System.Windows.Forms.NumericUpDown();
             this.filipSkat7 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Statistik = new System.Windows.Forms.TabPage();
             this.UdgifterChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label67 = new System.Windows.Forms.Label();
             this.saveNameBox = new System.Windows.Forms.TextBox();
+            this.OverallStats = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.madTab = new System.Windows.Forms.TabPage();
+            this.overallMadChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.Fælles.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -243,8 +250,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.filipASkatOp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filipAMOp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filipFradragOp)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.Statistik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UdgifterChart)).BeginInit();
+            this.OverallStats.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.madTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.overallMadChart)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -254,7 +265,8 @@
             this.tabControl1.Controls.Add(this.mieSkat);
             this.tabControl1.Controls.Add(this.filipØkonomi);
             this.tabControl1.Controls.Add(this.filipSkat);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.Statistik);
+            this.tabControl1.Controls.Add(this.OverallStats);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -2095,29 +2107,29 @@
             this.label45.TabIndex = 33;
             this.label45.Text = "Løn tilbage efter skat og fradraget";
             // 
-            // tabPage1
+            // Statistik
             // 
-            this.tabPage1.Controls.Add(this.UdgifterChart);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(595, 624);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "Statistik";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Statistik.Controls.Add(this.UdgifterChart);
+            this.Statistik.Location = new System.Drawing.Point(4, 22);
+            this.Statistik.Name = "Statistik";
+            this.Statistik.Size = new System.Drawing.Size(595, 624);
+            this.Statistik.TabIndex = 5;
+            this.Statistik.Text = "Statistik";
+            this.Statistik.UseVisualStyleBackColor = true;
             // 
             // UdgifterChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.UdgifterChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.UdgifterChart.Legends.Add(legend2);
-            this.UdgifterChart.Location = new System.Drawing.Point(39, 31);
+            chartArea1.Name = "ChartArea1";
+            this.UdgifterChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.UdgifterChart.Legends.Add(legend1);
+            this.UdgifterChart.Location = new System.Drawing.Point(90, 88);
             this.UdgifterChart.Name = "UdgifterChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.UdgifterChart.Series.Add(series2);
-            this.UdgifterChart.Size = new System.Drawing.Size(516, 466);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.UdgifterChart.Series.Add(series1);
+            this.UdgifterChart.Size = new System.Drawing.Size(454, 416);
             this.UdgifterChart.TabIndex = 0;
             this.UdgifterChart.Text = "chart1";
             // 
@@ -2167,6 +2179,52 @@
             this.saveNameBox.Size = new System.Drawing.Size(100, 20);
             this.saveNameBox.TabIndex = 11;
             this.saveNameBox.Text = "budget_file_01";
+            // 
+            // OverallStats
+            // 
+            this.OverallStats.Controls.Add(this.tabControl2);
+            this.OverallStats.Location = new System.Drawing.Point(4, 22);
+            this.OverallStats.Name = "OverallStats";
+            this.OverallStats.Size = new System.Drawing.Size(595, 624);
+            this.OverallStats.TabIndex = 6;
+            this.OverallStats.Text = "Løbende Statistik";
+            this.OverallStats.UseVisualStyleBackColor = true;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.madTab);
+            this.tabControl2.Location = new System.Drawing.Point(31, 24);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(528, 556);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // madTab
+            // 
+            this.madTab.Controls.Add(this.overallMadChart);
+            this.madTab.Location = new System.Drawing.Point(4, 22);
+            this.madTab.Name = "madTab";
+            this.madTab.Padding = new System.Windows.Forms.Padding(3);
+            this.madTab.Size = new System.Drawing.Size(520, 530);
+            this.madTab.TabIndex = 0;
+            this.madTab.Text = "Mad";
+            this.madTab.UseVisualStyleBackColor = true;
+            // 
+            // overallMadChart
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.overallMadChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.overallMadChart.Legends.Add(legend2);
+            this.overallMadChart.Location = new System.Drawing.Point(37, 117);
+            this.overallMadChart.Name = "overallMadChart";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.overallMadChart.Series.Add(series2);
+            this.overallMadChart.Size = new System.Drawing.Size(457, 292);
+            this.overallMadChart.TabIndex = 0;
+            this.overallMadChart.Text = "chart1";
             // 
             // Form1
             // 
@@ -2255,8 +2313,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.filipASkatOp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filipAMOp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filipFradragOp)).EndInit();
-            this.tabPage1.ResumeLayout(false);
+            this.Statistik.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UdgifterChart)).EndInit();
+            this.OverallStats.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.madTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.overallMadChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2418,10 +2480,14 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage Statistik;
         private System.Windows.Forms.DataVisualization.Charting.Chart UdgifterChart;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.TextBox saveNameBox;
+        private System.Windows.Forms.TabPage OverallStats;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage madTab;
+        private System.Windows.Forms.DataVisualization.Charting.Chart overallMadChart;
     }
 }
 
