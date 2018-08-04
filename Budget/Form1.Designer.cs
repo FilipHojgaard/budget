@@ -27,12 +27,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Fælles = new System.Windows.Forms.TabPage();
             this.totalTilbageLabel = new System.Windows.Forms.Label();
@@ -88,6 +91,8 @@
             this.mieBeforeTax = new System.Windows.Forms.Label();
             this.mieTotalLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mieBogOp = new System.Windows.Forms.NumericUpDown();
+            this.label68 = new System.Windows.Forms.Label();
             this.mieUdgifterLabel = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.miePigeOp = new System.Windows.Forms.NumericUpDown();
@@ -144,6 +149,8 @@
             this.filipBeforeTax = new System.Windows.Forms.Label();
             this.filipTotalLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.filipBogUp = new System.Windows.Forms.NumericUpDown();
+            this.label69 = new System.Windows.Forms.Label();
             this.filipUdgifterLabel = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -195,10 +202,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label67 = new System.Windows.Forms.Label();
             this.saveNameBox = new System.Windows.Forms.TextBox();
-            this.mieBogOp = new System.Windows.Forms.NumericUpDown();
-            this.label68 = new System.Windows.Forms.Label();
-            this.filipBogUp = new System.Windows.Forms.NumericUpDown();
-            this.label69 = new System.Windows.Forms.Label();
+            this.hyggeTab = new System.Windows.Forms.TabPage();
+            this.overallHyggeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.Fælles.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -221,6 +226,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.miePay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mieSU)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mieBogOp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miePigeOp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mieHyggeOp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mieTojOp)).BeginInit();
@@ -241,6 +247,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filipBogUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
@@ -260,8 +267,8 @@
             this.tabControl2.SuspendLayout();
             this.madTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overallMadChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mieBogOp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filipBogUp)).BeginInit();
+            this.hyggeTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.overallHyggeChart)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -974,6 +981,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Udgifter";
             // 
+            // mieBogOp
+            // 
+            this.mieBogOp.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.mieBogOp.Location = new System.Drawing.Point(167, 253);
+            this.mieBogOp.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.mieBogOp.Name = "mieBogOp";
+            this.mieBogOp.Size = new System.Drawing.Size(58, 20);
+            this.mieBogOp.TabIndex = 20;
+            this.mieBogOp.ValueChanged += new System.EventHandler(this.mieBogOp_ValueChanged);
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(29, 253);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(35, 13);
+            this.label68.TabIndex = 19;
+            this.label68.Text = "Bøger";
+            // 
             // mieUdgifterLabel
             // 
             this.mieUdgifterLabel.AutoSize = true;
@@ -1652,6 +1686,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Udgifter";
             // 
+            // filipBogUp
+            // 
+            this.filipBogUp.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.filipBogUp.Location = new System.Drawing.Point(167, 206);
+            this.filipBogUp.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.filipBogUp.Name = "filipBogUp";
+            this.filipBogUp.Size = new System.Drawing.Size(58, 20);
+            this.filipBogUp.TabIndex = 20;
+            this.filipBogUp.ValueChanged += new System.EventHandler(this.filipBogUp_ValueChanged);
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(29, 208);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(35, 13);
+            this.label69.TabIndex = 19;
+            this.label69.Text = "Bøger";
+            // 
             // filipUdgifterLabel
             // 
             this.filipUdgifterLabel.AutoSize = true;
@@ -2130,16 +2191,16 @@
             // 
             // UdgifterChart
             // 
-            chartArea7.Name = "ChartArea1";
-            this.UdgifterChart.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.UdgifterChart.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.UdgifterChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.UdgifterChart.Legends.Add(legend1);
             this.UdgifterChart.Location = new System.Drawing.Point(90, 88);
             this.UdgifterChart.Name = "UdgifterChart";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.UdgifterChart.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.UdgifterChart.Series.Add(series1);
             this.UdgifterChart.Size = new System.Drawing.Size(454, 416);
             this.UdgifterChart.TabIndex = 0;
             this.UdgifterChart.Text = "chart1";
@@ -2157,6 +2218,7 @@
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.madTab);
+            this.tabControl2.Controls.Add(this.hyggeTab);
             this.tabControl2.Location = new System.Drawing.Point(31, 24);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -2176,16 +2238,16 @@
             // 
             // overallMadChart
             // 
-            chartArea8.Name = "ChartArea1";
-            this.overallMadChart.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.overallMadChart.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.overallMadChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.overallMadChart.Legends.Add(legend2);
             this.overallMadChart.Location = new System.Drawing.Point(37, 117);
             this.overallMadChart.Name = "overallMadChart";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.overallMadChart.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.overallMadChart.Series.Add(series2);
             this.overallMadChart.Size = new System.Drawing.Size(457, 292);
             this.overallMadChart.TabIndex = 0;
             this.overallMadChart.Text = "chart1";
@@ -2237,59 +2299,31 @@
             this.saveNameBox.TabIndex = 11;
             this.saveNameBox.Text = "budget_file_01";
             // 
-            // mieBogOp
+            // hyggeTab
             // 
-            this.mieBogOp.Increment = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.mieBogOp.Location = new System.Drawing.Point(167, 253);
-            this.mieBogOp.Maximum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.mieBogOp.Name = "mieBogOp";
-            this.mieBogOp.Size = new System.Drawing.Size(58, 20);
-            this.mieBogOp.TabIndex = 20;
-            this.mieBogOp.ValueChanged += new System.EventHandler(this.mieBogOp_ValueChanged);
+            this.hyggeTab.Controls.Add(this.overallHyggeChart);
+            this.hyggeTab.Location = new System.Drawing.Point(4, 22);
+            this.hyggeTab.Name = "hyggeTab";
+            this.hyggeTab.Size = new System.Drawing.Size(520, 530);
+            this.hyggeTab.TabIndex = 1;
+            this.hyggeTab.Text = "Hygge";
+            this.hyggeTab.UseVisualStyleBackColor = true;
             // 
-            // label68
+            // overallHyggeChart
             // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(29, 253);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(35, 13);
-            this.label68.TabIndex = 19;
-            this.label68.Text = "Bøger";
-            // 
-            // filipBogUp
-            // 
-            this.filipBogUp.Increment = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.filipBogUp.Location = new System.Drawing.Point(167, 206);
-            this.filipBogUp.Maximum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.filipBogUp.Name = "filipBogUp";
-            this.filipBogUp.Size = new System.Drawing.Size(58, 20);
-            this.filipBogUp.TabIndex = 20;
-            this.filipBogUp.ValueChanged += new System.EventHandler(this.filipBogUp_ValueChanged);
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(29, 208);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(35, 13);
-            this.label69.TabIndex = 19;
-            this.label69.Text = "Bøger";
+            chartArea3.Name = "ChartArea1";
+            this.overallHyggeChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.overallHyggeChart.Legends.Add(legend3);
+            this.overallHyggeChart.Location = new System.Drawing.Point(64, 91);
+            this.overallHyggeChart.Name = "overallHyggeChart";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.overallHyggeChart.Series.Add(series3);
+            this.overallHyggeChart.Size = new System.Drawing.Size(401, 335);
+            this.overallHyggeChart.TabIndex = 0;
+            this.overallHyggeChart.Text = "chart1";
             // 
             // Form1
             // 
@@ -2336,6 +2370,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mieSU)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mieBogOp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miePigeOp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mieHyggeOp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mieTojOp)).EndInit();
@@ -2362,6 +2397,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filipBogUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
@@ -2384,8 +2420,8 @@
             this.tabControl2.ResumeLayout(false);
             this.madTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.overallMadChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mieBogOp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filipBogUp)).EndInit();
+            this.hyggeTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.overallHyggeChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2559,6 +2595,8 @@
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.NumericUpDown filipBogUp;
         private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.TabPage hyggeTab;
+        private System.Windows.Forms.DataVisualization.Charting.Chart overallHyggeChart;
     }
 }
 

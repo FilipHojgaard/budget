@@ -19,6 +19,8 @@ namespace Budget
         Mutual mutual = new Mutual();
 
         int[] altMad;
+        int[] altMieHygge;
+        int[] altFilipHygge;
 
 
         public Form1() {
@@ -62,6 +64,20 @@ namespace Budget
             overallMadChart.Legends.Add("mad udgifterer");
             overallMadChart.Series["mad udgifter"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
             overallMadChart.Series["mad udgifter"].Points.DataBindY(altMad);
+
+            // Hygge Statistik
+            overallHyggeChart.Series.Clear();
+            overallHyggeChart.Legends.Clear();
+            overallHyggeChart.Series.Add("Mie Hygge");
+            overallHyggeChart.Series.Add("Filip Hygge");
+            overallHyggeChart.Legends.Add("Mie Hygge");
+            overallHyggeChart.Legends.Add("Filip Hygge");
+            overallHyggeChart.Series["Mie Hygge"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            overallHyggeChart.Series["Filip Hygge"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            overallHyggeChart.Series["Mie Hygge"].Color = Color.Purple;
+            overallHyggeChart.Series["Filip Hygge"].Color = Color.Blue;
+            overallHyggeChart.Series["Mie Hygge"].Points.DataBindY(altMieHygge);
+            overallHyggeChart.Series["Filip Hygge"].Points.DataBindY(altFilipHygge);
         }
 
 
@@ -483,11 +499,17 @@ namespace Budget
         private void getStatistics(){
             String[] allFiles = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.bf");
             altMad = new int[allFiles.Length];
+            altMieHygge = new int[allFiles.Length];
+            altFilipHygge = new int[allFiles.Length];
             for (int i = 0; i < allFiles.Length; i++) {
-                Console.WriteLine(allFiles[i]);
+                Console.WriteLine("File " + (i+1) + " is " + allFiles[i]);
                 string[] allLines = File.ReadAllLines(allFiles[i]);
                 altMad[i] = Int32.Parse(allLines[6]);
+                altMieHygge[i] = Int32.Parse(allLines[21]);
+                altFilipHygge[i] = Int32.Parse(allLines[35]);
                 Console.WriteLine(altMad[i]);
+                Console.WriteLine("mie hygge: " + altMieHygge[i]);
+                Console.WriteLine("filip hygge: " + altFilipHygge[i]);
             }
 
 
