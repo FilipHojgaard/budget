@@ -37,6 +37,7 @@ namespace Budget
         public float transportOther;
         public float girlStuff;
         public float outcome;
+        public float books;
 
         // total left overs
         public float total;
@@ -44,7 +45,7 @@ namespace Budget
         public void Calculate() {
             income = pay + su;
             postTax = Taxes(income);
-            outcome = phone + transportDaily + fun + lenses + dentist + hair + clothes + transportOther + girlStuff;
+            outcome = phone + transportDaily + fun + lenses + dentist + hair + clothes + transportOther + girlStuff + books;
             total = postTax - outcome;
 
         }

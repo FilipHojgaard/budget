@@ -94,6 +94,7 @@ namespace Budget
             writer.WriteLine(mieTojOp.Value);
             writer.WriteLine(mieHyggeOp.Value);
             writer.WriteLine(miePigeOp.Value);
+            writer.WriteLine(mieBogOp.Value);
             // mie skat
             writer.WriteLine(mieASkat.Value);
             writer.WriteLine(MieAMBidrag.Value);
@@ -108,6 +109,7 @@ namespace Budget
             writer.WriteLine(numericUpDown4.Value);
             writer.WriteLine(numericUpDown3.Value);
             writer.WriteLine(numericUpDown2.Value);
+            writer.WriteLine(filipBogUp.Value);
             // filip skat
             writer.WriteLine(filipASkatOp.Value);
             writer.WriteLine(filipAMOp.Value);
@@ -120,6 +122,8 @@ namespace Budget
         public void LoadFile() {
             Console.WriteLine("attempting to load budget file");
             string[] allLines = File.ReadAllLines(saveNameBox.Text + ".bf");
+            // fælles økonomi
+            // fælles økonomi
             // fælles økonomi
             boligTilskudOp.Value = Int32.Parse(allLines[0]);
             huslejeOp.Value = Int32.Parse(allLines[1]);
@@ -145,24 +149,26 @@ namespace Budget
             mieTojOp.Value = Int32.Parse(allLines[20]);
             mieHyggeOp.Value = Int32.Parse(allLines[21]);
             miePigeOp.Value = Int32.Parse(allLines[22]);
+            mieBogOp.Value = Int32.Parse(allLines[23]);
             // mie skat
-            mieASkat.Value = Int32.Parse(allLines[23]);
-            MieAMBidrag.Value = Int32.Parse(allLines[24]);
-            MieFradrag.Value = Int32.Parse(allLines[25]);
+            mieASkat.Value = Int32.Parse(allLines[24]);
+            MieAMBidrag.Value = Int32.Parse(allLines[25]);
+            MieFradrag.Value = Int32.Parse(allLines[26]);
             // filip økonomi
-            numericUpDown11.Value = Int32.Parse(allLines[26]);
-            numericUpDown10.Value = Int32.Parse(allLines[27]);
-            numericUpDown9.Value = Int32.Parse(allLines[28]);
-            numericUpDown8.Value = Int32.Parse(allLines[29]);
-            numericUpDown5.Value = Int32.Parse(allLines[30]);
-            numericUpDown6.Value = Int32.Parse(allLines[31]);
-            numericUpDown4.Value = Int32.Parse(allLines[32]);
-            numericUpDown3.Value = Int32.Parse(allLines[33]);
-            numericUpDown2.Value = Int32.Parse(allLines[34]);
+            numericUpDown11.Value = Int32.Parse(allLines[27]);
+            numericUpDown10.Value = Int32.Parse(allLines[28]);
+            numericUpDown9.Value = Int32.Parse(allLines[29]);
+            numericUpDown8.Value = Int32.Parse(allLines[30]);
+            numericUpDown5.Value = Int32.Parse(allLines[31]);
+            numericUpDown6.Value = Int32.Parse(allLines[32]);
+            numericUpDown4.Value = Int32.Parse(allLines[33]);
+            numericUpDown3.Value = Int32.Parse(allLines[34]);
+            numericUpDown2.Value = Int32.Parse(allLines[35]);
+            filipBogUp.Value = Int32.Parse(allLines[36]);
             // filip skat
-            filipASkatOp.Value = Int32.Parse(allLines[35]);
-            filipAMOp.Value = Int32.Parse(allLines[36]);
-            filipFradragOp.Value = Int32.Parse(allLines[37]);
+            filipASkatOp.Value = Int32.Parse(allLines[37]);
+            filipAMOp.Value = Int32.Parse(allLines[38]);
+            filipFradragOp.Value = Int32.Parse(allLines[39]);
 
             Syncronize();
         }
@@ -485,6 +491,18 @@ namespace Budget
             }
 
 
+        }
+
+        private void mieBogOp_ValueChanged(object sender, EventArgs e) {
+            mie.books = (float)mieBogOp.Value;
+        }
+
+        private void filipØkonomi_Click(object sender, EventArgs e) {
+
+        }
+
+        private void filipBogUp_ValueChanged(object sender, EventArgs e) {
+            filip.books = (float)filipBogUp.Value;
         }
     }
 }
