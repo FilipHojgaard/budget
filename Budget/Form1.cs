@@ -189,6 +189,11 @@ namespace Budget
             Syncronize();
         }
 
+        public void calculateIndividualPercentage() {
+            // awesome kode
+            mieScrollbarLabel.Text = (mie.total - ((mutual.apartmentTotal + mutual.mutualOutcomeTotal) / 100 * mie.procent)).ToString();
+            filipScrollbarLabel.Text = (filip.total - ((mutual.apartmentTotal + mutual.mutualOutcomeTotal) / 100 * filip.procent)).ToString();
+        }
 
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e) {
@@ -312,6 +317,10 @@ namespace Budget
             tilbageKapital1Label.Text = (mutual.totalMutualIncome - mutual.apartmentTotal).ToString();
             fallesUdgifterIAltLabel.Text = mutual.mutualOutcomeTotal.ToString();
             totalTilbageLabel.Text = mutual.total.ToString();
+
+            // scrollbar
+            calculateProcent();
+            calculateIndividualPercentage();
 
             // statistics
             DrawCharts();
@@ -525,6 +534,28 @@ namespace Budget
 
         private void filipBogUp_ValueChanged(object sender, EventArgs e) {
             filip.books = (float)filipBogUp.Value;
+        }
+
+        public void calculateProcent() {
+            mie.procent = procentTrackBar.Value;
+            filip.procent = 100 - mie.procent;
+            Console.WriteLine("Procent bar: " + mie.procent + " " + filip.procent);
+        }
+
+        private void procentTrackBar_Scroll(object sender, EventArgs e) {
+            procentLabel.Text = procentTrackBar.Value.ToString() + " %";
+            calculateProcent();
+            calculateIndividualPercentage();
+        }
+
+        private void procentHelpBtn_Click(object sender, EventArgs e) {
+            MessageBox.Show("Sommetider er den ene person i plus og den anden " +
+                "i negativ på bundlinjen. Dette værktøj hjælper med at visualisere " +
+                "hvor mange penge hver person i hustanden har tilbage efter alle " +
+                "udgifter er betalt. Her kan man lege med hvor meget hver især bør " +
+                "betale for de fælles udgifter. Heraf Bolig udgifter i alt og de " +
+                "fælles udgifter i alt. " +
+                "\n\nVenstre er Mie. Højre er Filip.", "Procent hjælper");
         }
     }
 }

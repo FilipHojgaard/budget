@@ -27,15 +27,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Fælles = new System.Windows.Forms.TabPage();
             this.totalTilbageLabel = new System.Windows.Forms.Label();
@@ -197,13 +197,18 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.madTab = new System.Windows.Forms.TabPage();
             this.overallMadChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.hyggeTab = new System.Windows.Forms.TabPage();
+            this.overallHyggeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label67 = new System.Windows.Forms.Label();
             this.saveNameBox = new System.Windows.Forms.TextBox();
-            this.hyggeTab = new System.Windows.Forms.TabPage();
-            this.overallHyggeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.procentTrackBar = new System.Windows.Forms.TrackBar();
+            this.mieScrollbarLabel = new System.Windows.Forms.Label();
+            this.filipScrollbarLabel = new System.Windows.Forms.Label();
+            this.procentLabel = new System.Windows.Forms.Label();
+            this.procentHelpBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Fælles.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -269,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.overallMadChart)).BeginInit();
             this.hyggeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overallHyggeChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.procentTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -283,11 +289,16 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(603, 650);
+            this.tabControl1.Size = new System.Drawing.Size(603, 717);
             this.tabControl1.TabIndex = 0;
             // 
             // Fælles
             // 
+            this.Fælles.Controls.Add(this.procentHelpBtn);
+            this.Fælles.Controls.Add(this.procentLabel);
+            this.Fælles.Controls.Add(this.filipScrollbarLabel);
+            this.Fælles.Controls.Add(this.mieScrollbarLabel);
+            this.Fælles.Controls.Add(this.procentTrackBar);
             this.Fælles.Controls.Add(this.totalTilbageLabel);
             this.Fælles.Controls.Add(this.label66);
             this.Fælles.Controls.Add(this.tilbageKapital1Label);
@@ -298,7 +309,7 @@
             this.Fælles.Location = new System.Drawing.Point(4, 22);
             this.Fælles.Name = "Fælles";
             this.Fælles.Padding = new System.Windows.Forms.Padding(3);
-            this.Fælles.Size = new System.Drawing.Size(595, 624);
+            this.Fælles.Size = new System.Drawing.Size(595, 691);
             this.Fælles.TabIndex = 0;
             this.Fælles.Text = "Fælles Økonomi";
             this.Fælles.UseVisualStyleBackColor = true;
@@ -2191,16 +2202,16 @@
             // 
             // UdgifterChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.UdgifterChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.UdgifterChart.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.UdgifterChart.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.UdgifterChart.Legends.Add(legend7);
             this.UdgifterChart.Location = new System.Drawing.Point(90, 88);
             this.UdgifterChart.Name = "UdgifterChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.UdgifterChart.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.UdgifterChart.Series.Add(series7);
             this.UdgifterChart.Size = new System.Drawing.Size(454, 416);
             this.UdgifterChart.TabIndex = 0;
             this.UdgifterChart.Text = "chart1";
@@ -2238,66 +2249,19 @@
             // 
             // overallMadChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.overallMadChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.overallMadChart.Legends.Add(legend2);
+            chartArea8.Name = "ChartArea1";
+            this.overallMadChart.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.overallMadChart.Legends.Add(legend8);
             this.overallMadChart.Location = new System.Drawing.Point(37, 117);
             this.overallMadChart.Name = "overallMadChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.overallMadChart.Series.Add(series2);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.overallMadChart.Series.Add(series8);
             this.overallMadChart.Size = new System.Drawing.Size(457, 292);
             this.overallMadChart.TabIndex = 0;
             this.overallMadChart.Text = "chart1";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(522, 673);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 41);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Åben";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(433, 673);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 39);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Gem";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(173, 669);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(121, 48);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Synkroniser";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(13, 699);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(138, 13);
-            this.label67.TabIndex = 10;
-            this.label67.Text = "Filip Højgaard Jensen, 2018";
-            // 
-            // saveNameBox
-            // 
-            this.saveNameBox.Location = new System.Drawing.Point(327, 684);
-            this.saveNameBox.Name = "saveNameBox";
-            this.saveNameBox.Size = new System.Drawing.Size(100, 20);
-            this.saveNameBox.TabIndex = 11;
-            this.saveNameBox.Text = "budget_file_01";
             // 
             // hyggeTab
             // 
@@ -2311,25 +2275,124 @@
             // 
             // overallHyggeChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.overallHyggeChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.overallHyggeChart.Legends.Add(legend3);
+            chartArea9.Name = "ChartArea1";
+            this.overallHyggeChart.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.overallHyggeChart.Legends.Add(legend9);
             this.overallHyggeChart.Location = new System.Drawing.Point(64, 91);
             this.overallHyggeChart.Name = "overallHyggeChart";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.overallHyggeChart.Series.Add(series3);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.overallHyggeChart.Series.Add(series9);
             this.overallHyggeChart.Size = new System.Drawing.Size(401, 335);
             this.overallHyggeChart.TabIndex = 0;
             this.overallHyggeChart.Text = "chart1";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(522, 739);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(83, 41);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Åben";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(433, 739);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(83, 39);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Gem";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(173, 735);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(121, 48);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Synkroniser";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(13, 765);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(138, 13);
+            this.label67.TabIndex = 10;
+            this.label67.Text = "Filip Højgaard Jensen, 2018";
+            // 
+            // saveNameBox
+            // 
+            this.saveNameBox.Location = new System.Drawing.Point(327, 750);
+            this.saveNameBox.Name = "saveNameBox";
+            this.saveNameBox.Size = new System.Drawing.Size(100, 20);
+            this.saveNameBox.TabIndex = 11;
+            this.saveNameBox.Text = "budget_file_01";
+            // 
+            // procentTrackBar
+            // 
+            this.procentTrackBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.procentTrackBar.Location = new System.Drawing.Point(157, 616);
+            this.procentTrackBar.Maximum = 100;
+            this.procentTrackBar.Name = "procentTrackBar";
+            this.procentTrackBar.Size = new System.Drawing.Size(274, 45);
+            this.procentTrackBar.TabIndex = 8;
+            this.procentTrackBar.Value = 50;
+            this.procentTrackBar.Scroll += new System.EventHandler(this.procentTrackBar_Scroll);
+            // 
+            // mieScrollbarLabel
+            // 
+            this.mieScrollbarLabel.AutoSize = true;
+            this.mieScrollbarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mieScrollbarLabel.ForeColor = System.Drawing.Color.Fuchsia;
+            this.mieScrollbarLabel.Location = new System.Drawing.Point(155, 667);
+            this.mieScrollbarLabel.Name = "mieScrollbarLabel";
+            this.mieScrollbarLabel.Size = new System.Drawing.Size(14, 13);
+            this.mieScrollbarLabel.TabIndex = 9;
+            this.mieScrollbarLabel.Text = "0";
+            // 
+            // filipScrollbarLabel
+            // 
+            this.filipScrollbarLabel.AutoSize = true;
+            this.filipScrollbarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filipScrollbarLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.filipScrollbarLabel.Location = new System.Drawing.Point(414, 667);
+            this.filipScrollbarLabel.Name = "filipScrollbarLabel";
+            this.filipScrollbarLabel.Size = new System.Drawing.Size(14, 13);
+            this.filipScrollbarLabel.TabIndex = 10;
+            this.filipScrollbarLabel.Text = "0";
+            // 
+            // procentLabel
+            // 
+            this.procentLabel.AutoSize = true;
+            this.procentLabel.Location = new System.Drawing.Point(282, 667);
+            this.procentLabel.Name = "procentLabel";
+            this.procentLabel.Size = new System.Drawing.Size(30, 13);
+            this.procentLabel.TabIndex = 11;
+            this.procentLabel.Text = "50 %";
+            // 
+            // procentHelpBtn
+            // 
+            this.procentHelpBtn.Location = new System.Drawing.Point(437, 628);
+            this.procentHelpBtn.Name = "procentHelpBtn";
+            this.procentHelpBtn.Size = new System.Drawing.Size(24, 23);
+            this.procentHelpBtn.TabIndex = 12;
+            this.procentHelpBtn.Text = "?";
+            this.procentHelpBtn.UseVisualStyleBackColor = true;
+            this.procentHelpBtn.Click += new System.EventHandler(this.procentHelpBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 721);
+            this.ClientSize = new System.Drawing.Size(620, 791);
             this.Controls.Add(this.saveNameBox);
             this.Controls.Add(this.label67);
             this.Controls.Add(this.button7);
@@ -2422,6 +2485,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.overallMadChart)).EndInit();
             this.hyggeTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.overallHyggeChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.procentTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2597,6 +2661,11 @@
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.TabPage hyggeTab;
         private System.Windows.Forms.DataVisualization.Charting.Chart overallHyggeChart;
+        private System.Windows.Forms.Label filipScrollbarLabel;
+        private System.Windows.Forms.Label mieScrollbarLabel;
+        private System.Windows.Forms.TrackBar procentTrackBar;
+        private System.Windows.Forms.Label procentLabel;
+        private System.Windows.Forms.Button procentHelpBtn;
     }
 }
 

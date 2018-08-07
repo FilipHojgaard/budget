@@ -42,6 +42,9 @@ namespace Budget
         // total left overs
         public float total;
 
+        // other fields
+        public int procent;
+
         public void Calculate() {
             income = pay + su;
             postTax = Taxes(income);
