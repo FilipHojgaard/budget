@@ -8,3 +8,4 @@ C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.csproj.GenerateResour
 C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.csproj.CoreCompileInputs.cache
 C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.exe
 C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.pdb
+C:\Users\filip\source\repos\Budget\Budget\obj\Debug\Budget.NoteWindow.resources

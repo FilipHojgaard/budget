@@ -22,6 +22,7 @@ namespace Budget
         int[] altMieHygge;
         int[] altFilipHygge;
 
+        int mutualLines = 0;
 
         public Form1() {
             InitializeComponent();
@@ -98,6 +99,7 @@ namespace Budget
             writer.WriteLine(internetOp.Value);
             writer.WriteLine(netflixOp.Value);
             writer.WriteLine(spotifyOp.Value);
+            writer.WriteLine(mutualOthersUp.Value);
             // mie økonomi
             writer.WriteLine(miePay.Value);
             writer.WriteLine(mieSU.Value);
@@ -130,6 +132,15 @@ namespace Budget
             writer.WriteLine(filipASkatOp.Value);
             writer.WriteLine(filipAMOp.Value);
             writer.WriteLine(filipFradragOp.Value);
+
+            // note
+            // erstatter alle '\n' med et tegn. Jeg valgte '$' fordi der  er lav sandsynlighed for at en bruger bruger dette. 
+            // så kan hele teksten stå på en linje. 
+            string str = Mutual.note;
+            str = str.Replace("\n", "$");
+            Console.WriteLine("efter replace: " + str);
+            writer.WriteLine(str);
+
             writer.Close();
             MessageBox.Show("Saved succesfully", "Saving Budget");
             Console.WriteLine("Saved succesfully");
@@ -153,38 +164,55 @@ namespace Budget
             internetOp.Value = Int32.Parse(allLines[9]);
             netflixOp.Value = Int32.Parse(allLines[10]);
             spotifyOp.Value = Int32.Parse(allLines[11]);
+            mutualOthersUp.Value = Int32.Parse(allLines[12]);
             // mie økonomi
-            miePay.Value = Int32.Parse(allLines[12]);
-            mieSU.Value = Int32.Parse(allLines[13]);
-            mieTelefonOp.Value = Int32.Parse(allLines[14]);
-            mieDagligTransportOp.Value = Int32.Parse(allLines[15]);
-            mieLinserOp.Value = Int32.Parse(allLines[16]);
-            mieAndenTransportOp.Value = Int32.Parse(allLines[17]);
-            mieTandlageOp.Value = Int32.Parse(allLines[18]);
-            mieFrisorOp.Value = Int32.Parse(allLines[19]);
-            mieTojOp.Value = Int32.Parse(allLines[20]);
-            mieHyggeOp.Value = Int32.Parse(allLines[21]);
-            miePigeOp.Value = Int32.Parse(allLines[22]);
-            mieBogOp.Value = Int32.Parse(allLines[23]);
+            miePay.Value = Int32.Parse(allLines[13]);
+            mieSU.Value = Int32.Parse(allLines[14]);
+            mieTelefonOp.Value = Int32.Parse(allLines[15]);
+            mieDagligTransportOp.Value = Int32.Parse(allLines[16]);
+            mieLinserOp.Value = Int32.Parse(allLines[17]);
+            mieAndenTransportOp.Value = Int32.Parse(allLines[18]);
+            mieTandlageOp.Value = Int32.Parse(allLines[19]);
+            mieFrisorOp.Value = Int32.Parse(allLines[20]);
+            mieTojOp.Value = Int32.Parse(allLines[21]);
+            mieHyggeOp.Value = Int32.Parse(allLines[22]);
+            miePigeOp.Value = Int32.Parse(allLines[23]);
+            mieBogOp.Value = Int32.Parse(allLines[24]);
             // mie skat
-            mieASkat.Value = Int32.Parse(allLines[24]);
-            MieAMBidrag.Value = Int32.Parse(allLines[25]);
-            MieFradrag.Value = Int32.Parse(allLines[26]);
+            mieASkat.Value = Int32.Parse(allLines[25]);
+            MieAMBidrag.Value = Int32.Parse(allLines[26]);
+            MieFradrag.Value = Int32.Parse(allLines[27]);
             // filip økonomi
-            numericUpDown11.Value = Int32.Parse(allLines[27]);
-            numericUpDown10.Value = Int32.Parse(allLines[28]);
-            numericUpDown9.Value = Int32.Parse(allLines[29]);
-            numericUpDown8.Value = Int32.Parse(allLines[30]);
-            numericUpDown5.Value = Int32.Parse(allLines[31]);
-            numericUpDown6.Value = Int32.Parse(allLines[32]);
-            numericUpDown4.Value = Int32.Parse(allLines[33]);
-            numericUpDown3.Value = Int32.Parse(allLines[34]);
-            numericUpDown2.Value = Int32.Parse(allLines[35]);
-            filipBogUp.Value = Int32.Parse(allLines[36]);
+            numericUpDown11.Value = Int32.Parse(allLines[28]);
+            numericUpDown10.Value = Int32.Parse(allLines[29]);
+            numericUpDown9.Value = Int32.Parse(allLines[30]);
+            numericUpDown8.Value = Int32.Parse(allLines[31]);
+            numericUpDown5.Value = Int32.Parse(allLines[32]);
+            numericUpDown6.Value = Int32.Parse(allLines[33]);
+            numericUpDown4.Value = Int32.Parse(allLines[34]);
+            numericUpDown3.Value = Int32.Parse(allLines[35]);
+            numericUpDown2.Value = Int32.Parse(allLines[36]);
+            filipBogUp.Value = Int32.Parse(allLines[37]);
             // filip skat
-            filipASkatOp.Value = Int32.Parse(allLines[37]);
-            filipAMOp.Value = Int32.Parse(allLines[38]);
-            filipFradragOp.Value = Int32.Parse(allLines[39]);
+            filipASkatOp.Value = Int32.Parse(allLines[38]);
+            filipAMOp.Value = Int32.Parse(allLines[39]);
+            filipFradragOp.Value = Int32.Parse(allLines[40]);
+
+            // note
+            // læser linjen på 41 som er ordet. erstatter '$' med '\n' så der kommer new lines tilbage når man loader.
+            Mutual.note = "";
+            string word = "";
+            string orgword = allLines[41];
+            for (int i = 0; i < orgword.Length; i++) {
+                if (orgword[i].Equals('$')) {
+                    Mutual.note += word;
+                    Mutual.note += "\n";
+                    word = "";
+                } else {
+                    word += orgword[i];
+                }
+            }
+            Mutual.note += word;
 
             Syncronize();
         }
@@ -571,6 +599,25 @@ namespace Budget
                 "\n\nVenstre er Mie. Højre er Filip.\n" +
                 "Øverste viser hvor meget hver peson har tilbage efter alt er betalt.\n" +
                 "Nederste viser hvor meget hver person burde have overført til fælles kontoen for en helt optimal måned.", "Procent hjælper");
+        }
+
+
+        private void mutualOthersUp_ValueChanged(object sender, EventArgs e) {
+            mutual.otherOutcomes = (float)mutualOthersUp.Value;
+        }
+
+        // Skriv noter til ekstra udgifter
+        private void mutualNoteButton_Click(object sender, EventArgs e) {
+            NoteWindow mutualNote = new NoteWindow(Mutual.note);
+            mutualNote.Show();
+            //DialogResult dr = mutualNote.ShowDialog();
+            //if (DialogResult == DialogResult.OK) {
+            //    Console.WriteLine("Du trykkede OK i noten");
+            //}else if (DialogResult == DialogResult.Cancel) {
+            //    Console.WriteLine("Du trykkede annuller i noten");
+            //}
+            //mutualNote.Dispose();
+
         }
     }
 }
