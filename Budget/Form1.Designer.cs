@@ -27,18 +27,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Fælles = new System.Windows.Forms.TabPage();
-            this.mutualNoteButton = new System.Windows.Forms.Button();
             this.toMutualAccountLabel = new System.Windows.Forms.Label();
             this.resterendePengeLabel = new System.Windows.Forms.Label();
             this.filipTransferLabel = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.label66 = new System.Windows.Forms.Label();
             this.tilbageKapital1Label = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.mutualNoteButton = new System.Windows.Forms.Button();
             this.mutualOthersUp = new System.Windows.Forms.NumericUpDown();
             this.mutualOthersLabel = new System.Windows.Forms.Label();
             this.fallesUdgifterIAltLabel = new System.Windows.Forms.Label();
@@ -327,16 +327,6 @@
             this.Fælles.Text = "Fælles Økonomi";
             this.Fælles.UseVisualStyleBackColor = true;
             // 
-            // mutualNoteButton
-            // 
-            this.mutualNoteButton.Location = new System.Drawing.Point(258, 171);
-            this.mutualNoteButton.Name = "mutualNoteButton";
-            this.mutualNoteButton.Size = new System.Drawing.Size(32, 23);
-            this.mutualNoteButton.TabIndex = 17;
-            this.mutualNoteButton.Text = "<-";
-            this.mutualNoteButton.UseVisualStyleBackColor = true;
-            this.mutualNoteButton.Click += new System.EventHandler(this.mutualNoteButton_Click);
-            // 
             // toMutualAccountLabel
             // 
             this.toMutualAccountLabel.AutoSize = true;
@@ -486,6 +476,16 @@
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Fælles Udgifter";
+            // 
+            // mutualNoteButton
+            // 
+            this.mutualNoteButton.Location = new System.Drawing.Point(258, 171);
+            this.mutualNoteButton.Name = "mutualNoteButton";
+            this.mutualNoteButton.Size = new System.Drawing.Size(32, 23);
+            this.mutualNoteButton.TabIndex = 17;
+            this.mutualNoteButton.Text = "<-";
+            this.mutualNoteButton.UseVisualStyleBackColor = true;
+            this.mutualNoteButton.Click += new System.EventHandler(this.mutualNoteButton_Click);
             // 
             // mutualOthersUp
             // 
@@ -2349,16 +2349,16 @@
             // 
             // UdgifterChart
             // 
-            chartArea10.Name = "ChartArea1";
-            this.UdgifterChart.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.UdgifterChart.Legends.Add(legend10);
+            chartArea1.Name = "ChartArea1";
+            this.UdgifterChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.UdgifterChart.Legends.Add(legend1);
             this.UdgifterChart.Location = new System.Drawing.Point(90, 88);
             this.UdgifterChart.Name = "UdgifterChart";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.UdgifterChart.Series.Add(series10);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.UdgifterChart.Series.Add(series1);
             this.UdgifterChart.Size = new System.Drawing.Size(454, 416);
             this.UdgifterChart.TabIndex = 0;
             this.UdgifterChart.Text = "chart1";
@@ -2396,16 +2396,16 @@
             // 
             // overallMadChart
             // 
-            chartArea11.Name = "ChartArea1";
-            this.overallMadChart.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.overallMadChart.Legends.Add(legend11);
+            chartArea2.Name = "ChartArea1";
+            this.overallMadChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.overallMadChart.Legends.Add(legend2);
             this.overallMadChart.Location = new System.Drawing.Point(37, 117);
             this.overallMadChart.Name = "overallMadChart";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Series1";
-            this.overallMadChart.Series.Add(series11);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.overallMadChart.Series.Add(series2);
             this.overallMadChart.Size = new System.Drawing.Size(457, 292);
             this.overallMadChart.TabIndex = 0;
             this.overallMadChart.Text = "chart1";
@@ -2422,16 +2422,16 @@
             // 
             // overallHyggeChart
             // 
-            chartArea12.Name = "ChartArea1";
-            this.overallHyggeChart.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.overallHyggeChart.Legends.Add(legend12);
+            chartArea3.Name = "ChartArea1";
+            this.overallHyggeChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.overallHyggeChart.Legends.Add(legend3);
             this.overallHyggeChart.Location = new System.Drawing.Point(64, 91);
             this.overallHyggeChart.Name = "overallHyggeChart";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.overallHyggeChart.Series.Add(series12);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.overallHyggeChart.Series.Add(series3);
             this.overallHyggeChart.Size = new System.Drawing.Size(401, 335);
             this.overallHyggeChart.TabIndex = 0;
             this.overallHyggeChart.Text = "chart1";
@@ -2490,7 +2490,7 @@
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(44, 13);
             this.versionLabel.TabIndex = 12;
-            this.versionLabel.Text = "V. 0.8.0";
+            this.versionLabel.Text = "V. 0.8.1";
             // 
             // Form1
             // 

@@ -34,7 +34,7 @@ namespace Budget {
         public float total;
 
         // Other fields
-        public static string note;
+        public static string note = "";
 
         public void Calculate() {
             totalMutualIncome = mieIndkomst + filipIndkomst + boligTilskud;

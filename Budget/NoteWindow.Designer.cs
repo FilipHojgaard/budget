@@ -35,7 +35,7 @@
             this.gemButton.Name = "gemButton";
             this.gemButton.Size = new System.Drawing.Size(75, 23);
             this.gemButton.TabIndex = 1;
-            this.gemButton.Text = "Gem";
+            this.gemButton.Text = "Okay";
             this.gemButton.UseVisualStyleBackColor = true;
             this.gemButton.Click += new System.EventHandler(this.button1_Click);
             // 
