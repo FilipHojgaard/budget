@@ -27,17 +27,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Fælles = new System.Windows.Forms.TabPage();
+            this.procentHelpBtn = new System.Windows.Forms.Button();
+            this.procentLabel = new System.Windows.Forms.Label();
+            this.filipScrollbarLabel = new System.Windows.Forms.Label();
+            this.mieScrollbarLabel = new System.Windows.Forms.Label();
+            this.procentTrackBar = new System.Windows.Forms.TrackBar();
             this.totalTilbageLabel = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.tilbageKapital1Label = new System.Windows.Forms.Label();
@@ -204,13 +209,14 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label67 = new System.Windows.Forms.Label();
             this.saveNameBox = new System.Windows.Forms.TextBox();
-            this.procentTrackBar = new System.Windows.Forms.TrackBar();
-            this.mieScrollbarLabel = new System.Windows.Forms.Label();
-            this.filipScrollbarLabel = new System.Windows.Forms.Label();
-            this.procentLabel = new System.Windows.Forms.Label();
-            this.procentHelpBtn = new System.Windows.Forms.Button();
+            this.versionLabel = new System.Windows.Forms.Label();
+            this.mieTransferLabel = new System.Windows.Forms.Label();
+            this.filipTransferLabel = new System.Windows.Forms.Label();
+            this.resterendePengeLabel = new System.Windows.Forms.Label();
+            this.toMutualAccountLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Fælles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.procentTrackBar)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spotifyOp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.netflixOp)).BeginInit();
@@ -274,7 +280,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.overallMadChart)).BeginInit();
             this.hyggeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overallHyggeChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.procentTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -289,11 +294,15 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(603, 717);
+            this.tabControl1.Size = new System.Drawing.Size(603, 738);
             this.tabControl1.TabIndex = 0;
             // 
             // Fælles
             // 
+            this.Fælles.Controls.Add(this.toMutualAccountLabel);
+            this.Fælles.Controls.Add(this.resterendePengeLabel);
+            this.Fælles.Controls.Add(this.filipTransferLabel);
+            this.Fælles.Controls.Add(this.mieTransferLabel);
             this.Fælles.Controls.Add(this.procentHelpBtn);
             this.Fælles.Controls.Add(this.procentLabel);
             this.Fælles.Controls.Add(this.filipScrollbarLabel);
@@ -309,10 +318,63 @@
             this.Fælles.Location = new System.Drawing.Point(4, 22);
             this.Fælles.Name = "Fælles";
             this.Fælles.Padding = new System.Windows.Forms.Padding(3);
-            this.Fælles.Size = new System.Drawing.Size(595, 691);
+            this.Fælles.Size = new System.Drawing.Size(595, 712);
             this.Fælles.TabIndex = 0;
             this.Fælles.Text = "Fælles Økonomi";
             this.Fælles.UseVisualStyleBackColor = true;
+            // 
+            // procentHelpBtn
+            // 
+            this.procentHelpBtn.Location = new System.Drawing.Point(437, 628);
+            this.procentHelpBtn.Name = "procentHelpBtn";
+            this.procentHelpBtn.Size = new System.Drawing.Size(24, 23);
+            this.procentHelpBtn.TabIndex = 12;
+            this.procentHelpBtn.Text = "?";
+            this.procentHelpBtn.UseVisualStyleBackColor = true;
+            this.procentHelpBtn.Click += new System.EventHandler(this.procentHelpBtn_Click);
+            // 
+            // procentLabel
+            // 
+            this.procentLabel.AutoSize = true;
+            this.procentLabel.Location = new System.Drawing.Point(282, 676);
+            this.procentLabel.Name = "procentLabel";
+            this.procentLabel.Size = new System.Drawing.Size(30, 13);
+            this.procentLabel.TabIndex = 11;
+            this.procentLabel.Text = "50 %";
+            // 
+            // filipScrollbarLabel
+            // 
+            this.filipScrollbarLabel.AutoSize = true;
+            this.filipScrollbarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filipScrollbarLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.filipScrollbarLabel.Location = new System.Drawing.Point(414, 667);
+            this.filipScrollbarLabel.Name = "filipScrollbarLabel";
+            this.filipScrollbarLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.filipScrollbarLabel.Size = new System.Drawing.Size(14, 13);
+            this.filipScrollbarLabel.TabIndex = 10;
+            this.filipScrollbarLabel.Text = "0";
+            // 
+            // mieScrollbarLabel
+            // 
+            this.mieScrollbarLabel.AutoSize = true;
+            this.mieScrollbarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mieScrollbarLabel.ForeColor = System.Drawing.Color.Fuchsia;
+            this.mieScrollbarLabel.Location = new System.Drawing.Point(155, 667);
+            this.mieScrollbarLabel.Name = "mieScrollbarLabel";
+            this.mieScrollbarLabel.Size = new System.Drawing.Size(14, 13);
+            this.mieScrollbarLabel.TabIndex = 9;
+            this.mieScrollbarLabel.Text = "0";
+            // 
+            // procentTrackBar
+            // 
+            this.procentTrackBar.BackColor = System.Drawing.SystemColors.Menu;
+            this.procentTrackBar.Location = new System.Drawing.Point(157, 616);
+            this.procentTrackBar.Maximum = 100;
+            this.procentTrackBar.Name = "procentTrackBar";
+            this.procentTrackBar.Size = new System.Drawing.Size(274, 45);
+            this.procentTrackBar.TabIndex = 8;
+            this.procentTrackBar.Value = 50;
+            this.procentTrackBar.Scroll += new System.EventHandler(this.procentTrackBar_Scroll);
             // 
             // totalTilbageLabel
             // 
@@ -839,7 +901,7 @@
             this.mieØkonomi.Location = new System.Drawing.Point(4, 22);
             this.mieØkonomi.Name = "mieØkonomi";
             this.mieØkonomi.Padding = new System.Windows.Forms.Padding(3);
-            this.mieØkonomi.Size = new System.Drawing.Size(595, 624);
+            this.mieØkonomi.Size = new System.Drawing.Size(595, 691);
             this.mieØkonomi.TabIndex = 1;
             this.mieØkonomi.Text = "Mie Økonomi";
             this.mieØkonomi.UseVisualStyleBackColor = true;
@@ -1298,7 +1360,7 @@
             this.mieSkat.Controls.Add(this.label9);
             this.mieSkat.Location = new System.Drawing.Point(4, 22);
             this.mieSkat.Name = "mieSkat";
-            this.mieSkat.Size = new System.Drawing.Size(595, 624);
+            this.mieSkat.Size = new System.Drawing.Size(595, 691);
             this.mieSkat.TabIndex = 2;
             this.mieSkat.Text = "Mie Skat";
             this.mieSkat.UseVisualStyleBackColor = true;
@@ -1547,7 +1609,7 @@
             this.filipØkonomi.Controls.Add(this.label37);
             this.filipØkonomi.Location = new System.Drawing.Point(4, 22);
             this.filipØkonomi.Name = "filipØkonomi";
-            this.filipØkonomi.Size = new System.Drawing.Size(595, 624);
+            this.filipØkonomi.Size = new System.Drawing.Size(595, 691);
             this.filipØkonomi.TabIndex = 3;
             this.filipØkonomi.Text = "Filip Økonomi";
             this.filipØkonomi.UseVisualStyleBackColor = true;
@@ -1949,7 +2011,7 @@
             this.filipSkat.Controls.Add(this.label45);
             this.filipSkat.Location = new System.Drawing.Point(4, 22);
             this.filipSkat.Name = "filipSkat";
-            this.filipSkat.Size = new System.Drawing.Size(595, 624);
+            this.filipSkat.Size = new System.Drawing.Size(595, 691);
             this.filipSkat.TabIndex = 4;
             this.filipSkat.Text = "Filip Skat";
             this.filipSkat.UseVisualStyleBackColor = true;
@@ -2195,23 +2257,23 @@
             this.Statistik.Controls.Add(this.UdgifterChart);
             this.Statistik.Location = new System.Drawing.Point(4, 22);
             this.Statistik.Name = "Statistik";
-            this.Statistik.Size = new System.Drawing.Size(595, 624);
+            this.Statistik.Size = new System.Drawing.Size(595, 691);
             this.Statistik.TabIndex = 5;
             this.Statistik.Text = "Statistik";
             this.Statistik.UseVisualStyleBackColor = true;
             // 
             // UdgifterChart
             // 
-            chartArea7.Name = "ChartArea1";
-            this.UdgifterChart.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.UdgifterChart.Legends.Add(legend7);
+            chartArea4.Name = "ChartArea1";
+            this.UdgifterChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.UdgifterChart.Legends.Add(legend4);
             this.UdgifterChart.Location = new System.Drawing.Point(90, 88);
             this.UdgifterChart.Name = "UdgifterChart";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.UdgifterChart.Series.Add(series7);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.UdgifterChart.Series.Add(series4);
             this.UdgifterChart.Size = new System.Drawing.Size(454, 416);
             this.UdgifterChart.TabIndex = 0;
             this.UdgifterChart.Text = "chart1";
@@ -2221,7 +2283,7 @@
             this.OverallStats.Controls.Add(this.tabControl2);
             this.OverallStats.Location = new System.Drawing.Point(4, 22);
             this.OverallStats.Name = "OverallStats";
-            this.OverallStats.Size = new System.Drawing.Size(595, 624);
+            this.OverallStats.Size = new System.Drawing.Size(595, 691);
             this.OverallStats.TabIndex = 6;
             this.OverallStats.Text = "Løbende Statistik";
             this.OverallStats.UseVisualStyleBackColor = true;
@@ -2249,16 +2311,16 @@
             // 
             // overallMadChart
             // 
-            chartArea8.Name = "ChartArea1";
-            this.overallMadChart.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.overallMadChart.Legends.Add(legend8);
+            chartArea5.Name = "ChartArea1";
+            this.overallMadChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.overallMadChart.Legends.Add(legend5);
             this.overallMadChart.Location = new System.Drawing.Point(37, 117);
             this.overallMadChart.Name = "overallMadChart";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.overallMadChart.Series.Add(series8);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.overallMadChart.Series.Add(series5);
             this.overallMadChart.Size = new System.Drawing.Size(457, 292);
             this.overallMadChart.TabIndex = 0;
             this.overallMadChart.Text = "chart1";
@@ -2275,23 +2337,23 @@
             // 
             // overallHyggeChart
             // 
-            chartArea9.Name = "ChartArea1";
-            this.overallHyggeChart.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.overallHyggeChart.Legends.Add(legend9);
+            chartArea6.Name = "ChartArea1";
+            this.overallHyggeChart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.overallHyggeChart.Legends.Add(legend6);
             this.overallHyggeChart.Location = new System.Drawing.Point(64, 91);
             this.overallHyggeChart.Name = "overallHyggeChart";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.overallHyggeChart.Series.Add(series9);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.overallHyggeChart.Series.Add(series6);
             this.overallHyggeChart.Size = new System.Drawing.Size(401, 335);
             this.overallHyggeChart.TabIndex = 0;
             this.overallHyggeChart.Text = "chart1";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(522, 739);
+            this.button7.Location = new System.Drawing.Point(522, 760);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(83, 41);
             this.button7.TabIndex = 9;
@@ -2301,7 +2363,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(433, 739);
+            this.button6.Location = new System.Drawing.Point(433, 760);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(83, 39);
             this.button6.TabIndex = 8;
@@ -2311,7 +2373,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(173, 735);
+            this.button5.Location = new System.Drawing.Point(173, 756);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 48);
             this.button5.TabIndex = 4;
@@ -2322,7 +2384,7 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(13, 765);
+            this.label67.Location = new System.Drawing.Point(13, 767);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(138, 13);
             this.label67.TabIndex = 10;
@@ -2330,69 +2392,68 @@
             // 
             // saveNameBox
             // 
-            this.saveNameBox.Location = new System.Drawing.Point(327, 750);
+            this.saveNameBox.Location = new System.Drawing.Point(327, 771);
             this.saveNameBox.Name = "saveNameBox";
             this.saveNameBox.Size = new System.Drawing.Size(100, 20);
             this.saveNameBox.TabIndex = 11;
             this.saveNameBox.Text = "budget_file_01";
             // 
-            // procentTrackBar
+            // versionLabel
             // 
-            this.procentTrackBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.procentTrackBar.Location = new System.Drawing.Point(157, 616);
-            this.procentTrackBar.Maximum = 100;
-            this.procentTrackBar.Name = "procentTrackBar";
-            this.procentTrackBar.Size = new System.Drawing.Size(274, 45);
-            this.procentTrackBar.TabIndex = 8;
-            this.procentTrackBar.Value = 50;
-            this.procentTrackBar.Scroll += new System.EventHandler(this.procentTrackBar_Scroll);
+            this.versionLabel.AutoSize = true;
+            this.versionLabel.Location = new System.Drawing.Point(13, 788);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(44, 13);
+            this.versionLabel.TabIndex = 12;
+            this.versionLabel.Text = "V. 0.7.0";
             // 
-            // mieScrollbarLabel
+            // mieTransferLabel
             // 
-            this.mieScrollbarLabel.AutoSize = true;
-            this.mieScrollbarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mieScrollbarLabel.ForeColor = System.Drawing.Color.Fuchsia;
-            this.mieScrollbarLabel.Location = new System.Drawing.Point(155, 667);
-            this.mieScrollbarLabel.Name = "mieScrollbarLabel";
-            this.mieScrollbarLabel.Size = new System.Drawing.Size(14, 13);
-            this.mieScrollbarLabel.TabIndex = 9;
-            this.mieScrollbarLabel.Text = "0";
+            this.mieTransferLabel.AutoSize = true;
+            this.mieTransferLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mieTransferLabel.ForeColor = System.Drawing.Color.Fuchsia;
+            this.mieTransferLabel.Location = new System.Drawing.Point(155, 687);
+            this.mieTransferLabel.Name = "mieTransferLabel";
+            this.mieTransferLabel.Size = new System.Drawing.Size(14, 13);
+            this.mieTransferLabel.TabIndex = 13;
+            this.mieTransferLabel.Text = "0";
             // 
-            // filipScrollbarLabel
+            // filipTransferLabel
             // 
-            this.filipScrollbarLabel.AutoSize = true;
-            this.filipScrollbarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filipScrollbarLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.filipScrollbarLabel.Location = new System.Drawing.Point(414, 667);
-            this.filipScrollbarLabel.Name = "filipScrollbarLabel";
-            this.filipScrollbarLabel.Size = new System.Drawing.Size(14, 13);
-            this.filipScrollbarLabel.TabIndex = 10;
-            this.filipScrollbarLabel.Text = "0";
+            this.filipTransferLabel.AutoSize = true;
+            this.filipTransferLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filipTransferLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.filipTransferLabel.Location = new System.Drawing.Point(414, 687);
+            this.filipTransferLabel.Name = "filipTransferLabel";
+            this.filipTransferLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.filipTransferLabel.Size = new System.Drawing.Size(14, 13);
+            this.filipTransferLabel.TabIndex = 14;
+            this.filipTransferLabel.Text = "0";
             // 
-            // procentLabel
+            // resterendePengeLabel
             // 
-            this.procentLabel.AutoSize = true;
-            this.procentLabel.Location = new System.Drawing.Point(282, 667);
-            this.procentLabel.Name = "procentLabel";
-            this.procentLabel.Size = new System.Drawing.Size(30, 13);
-            this.procentLabel.TabIndex = 11;
-            this.procentLabel.Text = "50 %";
+            this.resterendePengeLabel.AutoSize = true;
+            this.resterendePengeLabel.Location = new System.Drawing.Point(15, 667);
+            this.resterendePengeLabel.Name = "resterendePengeLabel";
+            this.resterendePengeLabel.Size = new System.Drawing.Size(99, 13);
+            this.resterendePengeLabel.TabIndex = 15;
+            this.resterendePengeLabel.Text = "Resterende Penge:";
             // 
-            // procentHelpBtn
+            // toMutualAccountLabel
             // 
-            this.procentHelpBtn.Location = new System.Drawing.Point(437, 628);
-            this.procentHelpBtn.Name = "procentHelpBtn";
-            this.procentHelpBtn.Size = new System.Drawing.Size(24, 23);
-            this.procentHelpBtn.TabIndex = 12;
-            this.procentHelpBtn.Text = "?";
-            this.procentHelpBtn.UseVisualStyleBackColor = true;
-            this.procentHelpBtn.Click += new System.EventHandler(this.procentHelpBtn_Click);
+            this.toMutualAccountLabel.AutoSize = true;
+            this.toMutualAccountLabel.Location = new System.Drawing.Point(15, 687);
+            this.toMutualAccountLabel.Name = "toMutualAccountLabel";
+            this.toMutualAccountLabel.Size = new System.Drawing.Size(123, 13);
+            this.toMutualAccountLabel.TabIndex = 16;
+            this.toMutualAccountLabel.Text = "Overført til Fælles Konto:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 791);
+            this.ClientSize = new System.Drawing.Size(620, 811);
+            this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.saveNameBox);
             this.Controls.Add(this.label67);
             this.Controls.Add(this.button7);
@@ -2407,6 +2468,7 @@
             this.tabControl1.ResumeLayout(false);
             this.Fælles.ResumeLayout(false);
             this.Fælles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.procentTrackBar)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spotifyOp)).EndInit();
@@ -2485,7 +2547,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.overallMadChart)).EndInit();
             this.hyggeTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.overallHyggeChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.procentTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2666,6 +2727,11 @@
         private System.Windows.Forms.TrackBar procentTrackBar;
         private System.Windows.Forms.Label procentLabel;
         private System.Windows.Forms.Button procentHelpBtn;
+        private System.Windows.Forms.Label versionLabel;
+        private System.Windows.Forms.Label filipTransferLabel;
+        private System.Windows.Forms.Label mieTransferLabel;
+        private System.Windows.Forms.Label toMutualAccountLabel;
+        private System.Windows.Forms.Label resterendePengeLabel;
     }
 }
 

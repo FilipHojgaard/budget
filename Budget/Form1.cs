@@ -321,6 +321,7 @@ namespace Budget
             // scrollbar
             calculateProcent();
             calculateIndividualPercentage();
+            calculateTransferAmount();
 
             // statistics
             DrawCharts();
@@ -536,16 +537,28 @@ namespace Budget
             filip.books = (float)filipBogUp.Value;
         }
 
+        // Method to set person.procent. Is used each time the track_bar/slider is manipulated.
         public void calculateProcent() {
             mie.procent = procentTrackBar.Value;
             filip.procent = 100 - mie.procent;
             Console.WriteLine("Procent bar: " + mie.procent + " " + filip.procent);
         }
 
+        // Method to set person.transferAmount. Is called each time the slider is manipulated
+        public void calculateTransferAmount() {
+            mie.transferAmount = ((mutual.apartmentTotal + mutual.mutualOutcomeTotal - mutual.boligTilskud) * mie.procent / 100);
+            filip.transferAmount = ((mutual.apartmentTotal + mutual.mutualOutcomeTotal - mutual.boligTilskud) * filip.procent / 100);
+            mieTransferLabel.Text = mie.transferAmount.ToString();
+            filipTransferLabel.Text = filip.transferAmount.ToString();
+        }
+
+        // slider. Manipulates the percentages. This gives info on how much money each person have left. And how much each person should have 
+        // Inserted to the mutual bank account this month for a perfect budget.
         private void procentTrackBar_Scroll(object sender, EventArgs e) {
             procentLabel.Text = procentTrackBar.Value.ToString() + " %";
             calculateProcent();
             calculateIndividualPercentage();
+            calculateTransferAmount();
         }
 
         private void procentHelpBtn_Click(object sender, EventArgs e) {
@@ -555,7 +568,9 @@ namespace Budget
                 "udgifter er betalt. Her kan man lege med hvor meget hver især bør " +
                 "betale for de fælles udgifter. Heraf Bolig udgifter i alt og de " +
                 "fælles udgifter i alt. " +
-                "\n\nVenstre er Mie. Højre er Filip.", "Procent hjælper");
+                "\n\nVenstre er Mie. Højre er Filip.\n" +
+                "Øverste viser hvor meget hver peson har tilbage efter alt er betalt.\n" +
+                "Nederste viser hvor meget hver person burde have overført til fælles kontoen for en helt optimal måned.", "Procent hjælper");
         }
     }
 }

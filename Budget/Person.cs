@@ -44,6 +44,7 @@ namespace Budget
 
         // other fields
         public int procent;
+        public float transferAmount;
 
         public void Calculate() {
             income = pay + su;
