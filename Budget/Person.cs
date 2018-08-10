@@ -38,6 +38,7 @@ namespace Budget
         public float girlStuff;
         public float outcome;
         public float books;
+        public float andet;
 
         // total left overs
         public float total;
@@ -46,10 +47,13 @@ namespace Budget
         public int procent;
         public float transferAmount;
 
+        public static string mieNote = "";
+        public static string filipNote = "";
+
         public void Calculate() {
             income = pay + su;
             postTax = Taxes(income);
-            outcome = phone + transportDaily + fun + lenses + dentist + hair + clothes + transportOther + girlStuff + books;
+            outcome = phone + transportDaily + fun + lenses + dentist + hair + clothes + transportOther + girlStuff + books + andet;
             total = postTax - outcome;
 
         }

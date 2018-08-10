@@ -14,8 +14,10 @@ namespace Budget {
     public partial class NoteWindow : Form {
 
         string note;
+        int mode; //0 er mutual. 1 er Mie. 2 er Filip.
 
-        public NoteWindow(string udeNote) {
+        public NoteWindow(string udeNote, int mode) {
+            this.mode = mode;
             InitializeComponent();
             this.note = udeNote;
             noteTextBox.Text = note;
@@ -23,7 +25,20 @@ namespace Budget {
 
         private void button1_Click(object sender, EventArgs e) {
             note = noteTextBox.Text;
-            Mutual.note = note;
+            switch (mode) {
+                case 0:
+                    Mutual.note = note;
+                    MessageBox.Show("TEST: Trykkede på mutual");
+                    break;
+                case 1:
+                    Person.mieNote = note;
+                    MessageBox.Show("TEST: Trykkede på mie");
+                    break;
+                case 2:
+                    Person.filipNote = note;
+                    MessageBox.Show("TEST: Trykkede på filip");
+                    break;
+            }
             Hide();
         }
 

@@ -4,7 +4,7 @@
 150
 166
 100
-1400
+2000
 150
 0
 220
@@ -23,6 +23,7 @@
 250
 28
 0
+0
 39
 8
 4678
@@ -36,7 +37,10 @@
 150
 250
 0
+0
 39
 8
 4056
-test = 20 kr.
+Her kan man skrive$$en masse teste$$$$og gemme på så $mange linjeskift$$$man $har lyst til
+mies
+filips

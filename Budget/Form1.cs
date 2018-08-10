@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Filib;
 
 namespace Budget
 {
@@ -21,9 +22,11 @@ namespace Budget
         int[] altMad;
         int[] altMieHygge;
         int[] altFilipHygge;
+        int[] altMieTransport;
+        int[] altFilipTransport;
 
         int mutualLines = 0;
-
+        
         public Form1() {
             InitializeComponent();
         }
@@ -64,6 +67,7 @@ namespace Budget
             overallMadChart.Series.Add("mad udgifter");
             overallMadChart.Legends.Add("mad udgifterer");
             overallMadChart.Series["mad udgifter"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            overallMadChart.Series["mad udgifter"].Color = Color.Chocolate;
             overallMadChart.Series["mad udgifter"].Points.DataBindY(altMad);
 
             // Hygge Statistik
@@ -79,6 +83,20 @@ namespace Budget
             overallHyggeChart.Series["Filip Hygge"].Color = Color.Blue;
             overallHyggeChart.Series["Mie Hygge"].Points.DataBindY(altMieHygge);
             overallHyggeChart.Series["Filip Hygge"].Points.DataBindY(altFilipHygge);
+
+            // Transport Statistik
+            overallTransportChart.Series.Clear();
+            overallTransportChart.Legends.Clear();
+            overallTransportChart.Series.Add("Mie Transport");
+            overallTransportChart.Series.Add("Filip Transport");
+            overallTransportChart.Legends.Add("Mie Transport");
+            overallTransportChart.Legends.Add("Filip Transport");
+            overallTransportChart.Series["Mie Transport"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            overallTransportChart.Series["Filip Transport"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            overallTransportChart.Series["Mie Transport"].Color = Color.Purple;
+            overallTransportChart.Series["Filip Transport"].Color = Color.Blue;
+            overallTransportChart.Series["Mie Transport"].Points.DataBindY(altMieTransport);
+            overallTransportChart.Series["Filip Transport"].Points.DataBindY(altFilipTransport);
         }
 
 
@@ -113,6 +131,7 @@ namespace Budget
             writer.WriteLine(mieHyggeOp.Value);
             writer.WriteLine(miePigeOp.Value);
             writer.WriteLine(mieBogOp.Value);
+            writer.WriteLine(mieAndetUp.Value);
             // mie skat
             writer.WriteLine(mieASkat.Value);
             writer.WriteLine(MieAMBidrag.Value);
@@ -128,6 +147,7 @@ namespace Budget
             writer.WriteLine(numericUpDown3.Value);
             writer.WriteLine(numericUpDown2.Value);
             writer.WriteLine(filipBogUp.Value);
+            writer.WriteLine(filipAndetUp.Value);
             // filip skat
             writer.WriteLine(filipASkatOp.Value);
             writer.WriteLine(filipAMOp.Value);
@@ -140,6 +160,14 @@ namespace Budget
             str = str.Replace("\n", "$");
             Console.WriteLine("efter replace: " + str);
             writer.WriteLine(str);
+
+            string miestr = Person.mieNote;
+            miestr = miestr.Replace("\n", "$");
+            writer.WriteLine(miestr);
+
+            string filipstr = Person.filipNote;
+            filipstr = filipstr.Replace("\n", "$");
+            writer.WriteLine(filipstr);
 
             writer.Close();
             MessageBox.Show("Saved succesfully", "Saving Budget");
@@ -178,31 +206,33 @@ namespace Budget
             mieHyggeOp.Value = Int32.Parse(allLines[22]);
             miePigeOp.Value = Int32.Parse(allLines[23]);
             mieBogOp.Value = Int32.Parse(allLines[24]);
+            mieAndetUp.Value = Int32.Parse(allLines[25]);
             // mie skat
-            mieASkat.Value = Int32.Parse(allLines[25]);
-            MieAMBidrag.Value = Int32.Parse(allLines[26]);
-            MieFradrag.Value = Int32.Parse(allLines[27]);
+            mieASkat.Value = Int32.Parse(allLines[26]);
+            MieAMBidrag.Value = Int32.Parse(allLines[27]);
+            MieFradrag.Value = Int32.Parse(allLines[28]);
             // filip økonomi
-            numericUpDown11.Value = Int32.Parse(allLines[28]);
-            numericUpDown10.Value = Int32.Parse(allLines[29]);
-            numericUpDown9.Value = Int32.Parse(allLines[30]);
-            numericUpDown8.Value = Int32.Parse(allLines[31]);
-            numericUpDown5.Value = Int32.Parse(allLines[32]);
-            numericUpDown6.Value = Int32.Parse(allLines[33]);
-            numericUpDown4.Value = Int32.Parse(allLines[34]);
-            numericUpDown3.Value = Int32.Parse(allLines[35]);
-            numericUpDown2.Value = Int32.Parse(allLines[36]);
-            filipBogUp.Value = Int32.Parse(allLines[37]);
+            numericUpDown11.Value = Int32.Parse(allLines[29]);
+            numericUpDown10.Value = Int32.Parse(allLines[30]);
+            numericUpDown9.Value = Int32.Parse(allLines[31]);
+            numericUpDown8.Value = Int32.Parse(allLines[32]);
+            numericUpDown5.Value = Int32.Parse(allLines[33]);
+            numericUpDown6.Value = Int32.Parse(allLines[34]);
+            numericUpDown4.Value = Int32.Parse(allLines[35]);
+            numericUpDown3.Value = Int32.Parse(allLines[36]);
+            numericUpDown2.Value = Int32.Parse(allLines[37]);
+            filipBogUp.Value = Int32.Parse(allLines[38]);
+            filipAndetUp.Value = Int32.Parse(allLines[39]);
             // filip skat
-            filipASkatOp.Value = Int32.Parse(allLines[38]);
-            filipAMOp.Value = Int32.Parse(allLines[39]);
-            filipFradragOp.Value = Int32.Parse(allLines[40]);
+            filipASkatOp.Value = Int32.Parse(allLines[40]);
+            filipAMOp.Value = Int32.Parse(allLines[41]);
+            filipFradragOp.Value = Int32.Parse(allLines[42]);
 
             // note
             // læser linjen på 41 som er ordet. erstatter '$' med '\n' så der kommer new lines tilbage når man loader.
             Mutual.note = "";
             string word = "";
-            string orgword = allLines[41];
+            string orgword = allLines[43];
             for (int i = 0; i < orgword.Length; i++) {
                 if (orgword[i].Equals('$')) {
                     Mutual.note += word;
@@ -213,6 +243,10 @@ namespace Budget
                 }
             }
             Mutual.note += word;
+
+            // mie note
+            Person.mieNote = Filib.Filib.UnPackLines(allLines[44], '$');
+            Person.filipNote = Filib.Filib.UnPackLines(allLines[45], '$');
 
             Syncronize();
         }
@@ -539,12 +573,16 @@ namespace Budget
             altMad = new int[allFiles.Length];
             altMieHygge = new int[allFiles.Length];
             altFilipHygge = new int[allFiles.Length];
+            altMieTransport = new int[allFiles.Length];
+            altFilipTransport = new int[allFiles.Length];
             for (int i = 0; i < allFiles.Length; i++) {
                 Console.WriteLine("File " + (i+1) + " is " + allFiles[i]);
                 string[] allLines = File.ReadAllLines(allFiles[i]);
                 altMad[i] = Int32.Parse(allLines[6]);
-                altMieHygge[i] = Int32.Parse(allLines[21]);
-                altFilipHygge[i] = Int32.Parse(allLines[35]);
+                altMieHygge[i] = Int32.Parse(allLines[22]);
+                altFilipHygge[i] = Int32.Parse(allLines[37]);
+                altMieTransport[i] = Int32.Parse(allLines[18]);
+                altFilipTransport[i] = Int32.Parse(allLines[33]);
                 Console.WriteLine(altMad[i]);
                 Console.WriteLine("mie hygge: " + altMieHygge[i]);
                 Console.WriteLine("filip hygge: " + altFilipHygge[i]);
@@ -608,7 +646,7 @@ namespace Budget
 
         // Skriv noter til ekstra udgifter
         private void mutualNoteButton_Click(object sender, EventArgs e) {
-            NoteWindow mutualNote = new NoteWindow(Mutual.note);
+            NoteWindow mutualNote = new NoteWindow(Mutual.note, 0);
             mutualNote.Show();
             //DialogResult dr = mutualNote.ShowDialog();
             //if (DialogResult == DialogResult.OK) {
@@ -618,6 +656,24 @@ namespace Budget
             //}
             //mutualNote.Dispose();
 
+        }
+
+        private void mieAndetUp_ValueChanged(object sender, EventArgs e) {
+            mie.andet = (float)mieAndetUp.Value;
+        }
+
+        private void filipAndetUp_ValueChanged(object sender, EventArgs e) {
+            filip.andet = (float)filipAndetUp.Value;
+        }
+
+        private void mieAndetBtn_Click(object sender, EventArgs e) {
+            NoteWindow mieNote = new NoteWindow(Person.mieNote, 1);
+            mieNote.Show();
+        }
+
+        private void filipAndetBtn_Click(object sender, EventArgs e) {
+            NoteWindow filipNote = new NoteWindow(Person.filipNote, 2);
+            filipNote.Show();
         }
     }
 }
